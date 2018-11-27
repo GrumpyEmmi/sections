@@ -1,0 +1,105 @@
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Risk Analysis\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v3.04 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/Risk.tex}{.../MainDocument/sections/Risk.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/w0awuH7n/9-risk-analysis}{trello.com/c/w0awuH7n/9-risk-analysis} \\
+
+\textbf{Responsible:} idbo \\
+\textbf{Status:} Finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+12/09/18	&idbo		&Created \\
+29/10/18	&leba	&Updated text \\
+01/11/18	&abru	&Added tables \\	
+			&		&Updated formatting \\
+02/11/18	&leba	&Updated text \\
+18/11/18	&renha	&Added configuration management \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+abru	&Legacy section, imported from Google Docs to GitHub
+\\
+\end{tabular}
+}
+
+\section{Risk Analysis}
+
+Risk management is very important when it comes to project management. Therefore, it is highly recommended that the project manager/project staff pin down the possible risk within a software development project. Risk, in terms of technological change and hardware \cite[p.644-646]{Sommerville}, is not included in the Risk Analysis of \textit{strEAT}, since we are not programming the actual app \textit{strEAT}.
+
+The following figures are divided into:
+\begin{enumerate}
+  \item Risk - The possible risk is identified.
+  \item Affect - What the risk can affect.
+  \item Description - A deeper description of the risk.
+  \item Strategy - What can be done to prevent the risk from happening, or what can be done if the risk happens.
+  \item Probabilities - Categorising the risk as having a low, moderate or high probability of occuring.
+  \item Effects - Categorising the risk as having a tolerable, serious or catastrohpic effect should it occur.
+\end{enumerate}
+
+\subsection{Product Oriented Risks}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}p{.1\textwidth}p{.08\textwidth}p{.21\textwidth}p{.2\textwidth}p{.17\textwidth}c@{}}\toprule
+\multicolumn{1}{c}{\textbf{Risk}}
+& \textbf{Affects}
+& \multicolumn{1}{c}{\textbf{Description}}                                                                                                  & \multicolumn{1}{c}{\textbf{Strategy}}                                                                                 & \multicolumn{1}{c}{\textbf{Probabilities}}                                                   & \textbf{Effect} \\ \midrule
+Vendors and users are not interested in the app
+& Product
+& If the needs of the vendors and users are not properly identified and researched upon, it can lead to vendors and users not using the app
+& Keep contact with many different vendors and users, to make sure that their needs are included in the app development
+& Moderate--High This can be set lower when vendors and users are investigated more thoroughly & Catastrophic    \\ \midrule
+Another company is developing the same app
+& Product (and project) & A competing company is "secretly" developing the same app                                                                                 & Keep track of similar companies and try to keep track of what they are developing                                     & Moderate--High Could JustEat or Wolt have the same idea, and if not, why?                    & Catastrophic    \\ \bottomrule
+\end{tabular}
+\caption{Product oriented risks for our project}
+\label{table_product_risks}
+\end{table}
+\pagebreak
+\subsection{Project Oriented Risk}
+
+\begin{longtable}[c]{@{}p{.1\textwidth}p{.09\textwidth}p{.2\textwidth}p{.2\textwidth}cc@{}}\toprule
+\multicolumn{1}{c}{\textbf{Risk}}                  & \multicolumn{1}{c}{\textbf{Affects}} & \multicolumn{1}{c}{\textbf{Description}}                                                                                                                                                                                                                      & \multicolumn{1}{c}{\textbf{Strategy}}                                                                                                                                        & \multicolumn{1}{c}{\textbf{Probabilities}} & \multicolumn{1}{c}{\textbf{Effect}}                           \\* \midrule
+\endhead
+Agreed deadlines exceeded                          & Project (and product)                & If a project member is not delivering within the agreed upon deadline, it can prevent other project members continuing or starting new tasks                                                                                                                  & Making sure that all the project members have been part of the project planning and therefore are aware of the deadlines                                                     & Moderate                                   & Serious                                                       \\* \midrule
+Illnes in the project staff                        & Project (and product)                & If a project members is ill and cannot deliver, other project members will have to take on their tasks and possibly leading to delays in their own tasks                                                                                                      & All project members are aware of each others' tasks, so they know what the ill member is working on, and should therefore be able to work on their tasks with relative ease  & Moderate                                   & \begin{tabular}[c]{@{}l@{}}Tolerable--\\ Serious\end{tabular} \\* \midrule
+Project members competencies are not used properly & Project                              & The project members have different competencies. If a project member feels like their competencies are not being utilized properly it can lead to declining engagement in the project. Furthermore the project might miss out on a needed set of competencies & The project members talk about or write down their set of  competencies so every project member is aware of eachother's competencies, and can ask for their help when needed & High                                       & Catastrophic                                                  \\* \bottomrule
+\caption{Project oriented risks for our project}
+\label{table_project_risks}
+\end{longtable}
+\pagebreak
+\subsection{Risk Prioritization}
+
+From this analysis, we can begin to prioritise the different risks according to their probability and the severity of their effects. This is a valuable tool in mitigating potential dangers in the future product development. After intense discussion, the \textit{strEAT} team have agreed on the following prioritized list for the product-oriented risks:
+
+\begin{enumerate}
+    \item Another company is developing the same app (product oriented)
+   During our initial search of the market we have found no indication that other companies are developing the same app, such as JustEat and Wolt. However, we must also consider that information regarding the development of such an app would most likely not be publically available.
+   The project team consider this as a high risk because we can not control or prevent this from happening.
+   \item Vendors and users are not interested in the app (product oriented)
+   This would completely destroy the feasibility of the project and a priori we would assume a high likelihood for this risk. In order to mitigate this risk, we decided to do a small market feasibility analysis at Reffen during our project kickoff. This consisted of interviews with vendors about their opinions concerning the project. In general, there was a positive attitude to the project and the vendors showed interest in the product.  In order to continually keep this risk low we should keep in touch with the vendors at Reffen and possibly conduct more interviews. Therefore, this is a risk that the project team can keep track off.
+\end{enumerate}
+
+\textbf{And for the project oriented risks:}
+
+\begin{enumerate}
+    \item Project members competencies are not used properly (project oriented)
+    To make sure that competencies in the team are used properly, we will make note of the different group members competencies in line with their previous education and work experience. We will incorporate this into the planning, and also make sure that different team members try out tasks that they haven’t done before.
+    \item Agreed deadlines exceeded (project oriented)
+    Missing deadlines can have serious consequences for the team and we will need to avoid this happening at all costs. In order to mitigate this risk, we have all deadlines posted on our Trello board.
+    \item Illness in the project staff (project oriented)
+   It is very difficult to prevent team members from getting ill, thus this risk is a difficult one to control. Due to the size of our team, the event of a single team member falling ill for a few days should not disrupt our work too much. In order to mitigate the consequences of ill team members, we agree on a protocol for when team members fall ill and therefore need help for finishing deadlines. It is each team members responsibility to tell the other team members if they cannot finish a task because of illness. We will add this to our team protocol. We consider this risk relevant but with low prioritization.
+\end{enumerate}
+\noindent
+The risk analysis will be followed up by the project members. If other risks are identified throughout the project they will be added to the figure and prioritized list.

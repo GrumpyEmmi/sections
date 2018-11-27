@@ -1,0 +1,198 @@
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Software Process Models\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v3.09 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/SoftwareProcessModels.tex}{.../MainDocument/sections/SoftwareProcessModels.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/yFlNPq7o/12-choose-a-software-process-models}{trello.com/c/yFlNPq7o/12-choose-a-software-process-models} \\
+
+\textbf{Responsible:} kati\\
+\textbf{Status:} Finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+08/09/18	&kati	&Created \\
+			&		&Added "Introduction", "Agile...", "The pros and cons..." \& "Our decision" \\
+09/09/18	&leba	&Added "The Waterfall Model" \\
+			&		&Updated pros and cons \& decision \\
+09/09/18	&abru	&Added "The STEPS Model" \\
+			&		&Updated pros and cons \& decision \\
+09/09/18	&jopo	&Added "The Spiral Model" \\
+			&		&Updated pros and cons \& decision \\
+01/11/18	&abru	&Added Latex table \\
+02/11/18	&leba	&Updated formatting \& text \\
+18/11/18	&leba	&Updated text \\
+18/11/18	&renha	&Added configuration management \\
+23/11/18	&leba	&Updated text \\
+25/11/18  &leba &Updated referencs and general QA \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+abru	&Legacy section, imported from Google Docs to GitHub \\
+abru	&NEED TO CHECK CITATIONS IN THIS SECTION\\
+\\
+\end{tabular}
+}
+
+
+\section{Software Process Models}
+In order to choose a software process model that fits our case and preferences, we have decided to look into some of the models introduced in this course. Therefore, we will present the basic features of each model and evaluate the pros and cons of each in order to make our decision.
+
+\subsection{The Waterfall Model}
+
+Originating out of the manufacturing industry and later adapted for software engineering, the Waterfall process model uses clearly defined phases to move projects towards completion \cite{Benington}. An intuitive structure, Waterfall requires teams to complete each block of tasks before progressing any further. The simplest Waterfall models are followed in one direction, however, more advanced models may use backwards paths to earlier phases as required. Backwards paths are used to provide model flexibility \cite{Royce}.
+
+There are several advantages of the Waterfall model to highlight. With even the more complicated Waterfall models able to be represented with straight forward diagrams, they are quite easily digested by those uninitiated into the world of process models \cite{Hughey}. This ensures that all those involved in the project are able to follow along, mitigating the risk of some members or teams losing track \cite{Lucidchart}.
+
+The structure also encourages thorough research and definition of requirements in the early phases, in part to expose potential problems that may occur in latter phases \cite{Royce}. Problems exposed early in the production cycle are much cheaper to fix, by a factor of 50 to 200, than those uncovered in latter stages \cite{McConnell_1996}. Furthermore, determining the project’s actual requirements allows teams to keep the end goal in sight, represented as the final block in the model. This gives the teams something common to work towards, and prevents the final goal being out of focus for certain teams.
+
+Finally, the Waterfall process emphasises the accessibility of information between phases via well-structured documentation. Should a team working in a downstream phase wish to inspect work done at an earlier point in time, its documentation should be available for reference.
+
+In relation to the advantages, several disadvantages can also be identified.  Despite the apparent advantages of having an intuitive and methodical process model, the rigidity of the simpler Waterfall structures can also prove detrimental to final output quality, client satisfaction and overall flexibility regarding unforeseen project changes.
+
+Requirement changes from clients or end-users are commonplace in the software development industry, and their accommodation usually requires a pivot in terms of product design, development and testing \cite{Parnas}. Feedforward Waterfall models show all information and requirement gathering only taking place in the first phase of a project, with little room for revision (whether that be by internal or external parties) and subsequent change via backwards paths \cite{Weisert}. This is in contrast to the iterative approach employed by other methods, such as the spiral model \cite{Boehm_2000} or agile development \cite{Beck}. Furthermore, the addition of a customer representative, like the “Project Owner” in the Scrum framework for Agile development \cite{Schwaber}, is missing in the pure Waterfall model. The absence of this external line of communication means customer feedback on the existing software is not possible, which may result in an unsatisfactory product. Smaller projects or those with hard and fast objectives, where there is a narrow field of potential deviation from functional and form requirements, tend to be less sensitive to client and end-user exclusion \cite{Lucidchart}.
+
+Finally, compared to the more agile development models which promote constant testing, the Waterfall model leaves testing until late in the piece. This means difficulties or flaws in the software features can go unnoticed deep into the project’s timeline \cite{McConnell_2004}.
+
+In conclusion, the advantages and disadvantages of the simplest form of the Waterfall process model revolve around the fact it flows in one direction. It is easily digested, focused on the final product, appropriate for small-scale projects or those with well-defined requirements, and encourages high quality documentation. However, the minimal client-developer interaction throughout the life of the project and no possibility of revision can result in a product that may not line up with what the former had in mind. Finally, delayed product testing can allow design flaws to exist long into a projects lifetime, potentially increasing expenditure and resulting in lengthy delays or the loss of work. In response to these flaws, several modified waterfall models have been proposed. These include, but are not limited to, Rapid Development \cite{McConnell_1996}, the Sashimi model by Peter De Grace, and the V-model \cite{Fosberg}.
+
+
+\subsection{The Spiral Model}
+
+The spiral model combines the idea of iterative development with the systematic, controlled aspects of the waterfall model together with a very high emphasis on risk analysis. It allows incremental releases of the product or incremental refinement through each iteration around the spiral. The exact number of phases needed to develop the product can be varied by the project manager depending upon the project risks. As the project manager dynamically determines the number of phases, they have an important role in the development of a product using the spiral model (Boehm, 2014).
+
+Handling risks is the most important feature of the spiral Model (Sommerville, 2016). Such risk resolutions are easier done by developing a prototype. The spiral model supports dealing with risks by providing the scope to build a prototype at every phase of the software development.
+Each phase of the spiral model is divided into four quadrants. The functions of these four quadrants are:
+
+\begin{enumerate}
+	\item Objectives determination and identification of alternative strategies and solutions. Requirements are gathered from the customers and the objectives are identified, elaborated and analyzed at the beginning of every phase. A detailed management plan is drawn up.
+
+	\item During the second quadrant all the possible solutions are evaluated to select the best. Then the risks associated with that solution are identified and steps are taken to reduce them. At the end of this quadrant, a prototype is built for the best possible solution.
+
+	\item During the third quadrant, the identified features are developed and verified through testing. At the end of this quadrant, the new iteration of the software is available.
+	\item In the fourth quadrant, the customers evaluate the current version of the software. After review, the decision is made whether to continue with another loop of the spiral. If the decision is made to continue, planning for the next phase is started (Boehm,  1988).
+\end{enumerate}
+
+
+\subsection{The STEPS Model}
+
+The Software Technology for Evolutionary Participative System Development is a methodical approach developed by C. Floyd, M. Reisin, and G. Schmidt at the Technical University of Berlin. It was first presented at the 1989 European Software Engineering Conference \cite{Floyd}, offering a different perspective on software development, specifically user-oriented software development, as a perpetual process where production and use are not separable, but rather inter-reliant parts of the software design process as a whole. As argued by the authors:
+
+\begin{quotation}
+	“(…) viewing software development as production, and thereby focussing our attention primarily on the product software is misleading. Instead, I consider processes of software development as the primary area of concern, I regard product software as emerging from these processes and the use of software intertwined with its development.” \cite[pp. 49]{Floyd}.
+\end{quotation}
+
+
+
+In other words, the process of designing software should focus not only on the production of software nor only the use of it, but rather on both, and more significantly their reciprocal effects, in order to ensure the quality of the software product(s). The aim of STEPS as a framework is to facilitate this cooperation between developers and users.
+
+While the approach theoretically applies to software production in general, it is primarily concerned with what the authors describe as “the cooperative development of software to be fitted into user work processes” \cite[pp. 51]{Floyd}, and the connection between the fields of software development and work design. In such projects “(…) software development does not start from pre-defined problems, but must be considered a learning process involving the unfoldment of the problems as well as the elaboration of a solution fitting the problem.” \cite[pp. 50]{Floyd} and “(...) technical concerns for providing high-quality products are inherently tied up with issues of communication, work, and social processes” \cite[pp. 51]{Floyd}.
+
+As such it is imperative that neither developers nor users consider their efforts in a vacuum. While the developers’ primary task is to program the software, it is important that they understand how their work indirectly affects the users, and even more so that they understand the work processes of the users. Meanwhile, users are faced with changing work processes due to the software being developed, and have to adjust how they work in accordance. These adjustments, in turn, will affect the developers, as the design of the software now has to accommodate different processes than originally intended. As a result “(…) it is not possible to define the required functions and quality of a software system, which is to be used in working processes, completely at any fixed point in time.” \cite[pp. 53]{Floyd} and the process of developing the software becomes iterative or cyclical, as changes to the software leads to changes in the work processes of the users which, again, leads to changes in the software, etc.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/ModelsFig1.PNG}
+  \caption{\colorbox{red}{NEEDS CAPTION}}
+  \label{ModelsFig1}
+\end{figure}
+In order to facilitate this iterative cooperative process of developing software, the STEPS framework presents the cyclical evolutionary project model shown below, outlining the different tasks to be performed by users, developers, and those to be performed cooperatively. As can be seen from the model, the development process never ends; there is no final product version. Instead there are new versions (prototypes) of the software addressing the changes to the work of the users as a result of the previous version.
+
+
+\subsection{Agile Software Development}
+Agile development is a software development process that emerged during the late 1990s as a response to the more plan-driven development processes. The idea behind the agile method is to develop and produce software more quickly, in order to keep up with the rapidly evolving markets, so that a software product can be delivered to the customer before the product loses its relevance (Sommerville 2016: 73).
+
+The agile development process is incremental in the way the process is subdivided. However, the increments are rather small, and the software product itself is therefore updated frequently after its release (Ibid.: 74). For this reason, the agile development process can be considered useful when developing mobile applications, since smaller updates, in a timespan of a couple of weeks or months, are quite common for mobile applications. As Sommerville (2016: 76) points to, the agile development process is, today, almost always used for developing small or medium-sized products for sale, or for the development of custom-made systems where the customer is committed and involved in the process. Essentially, communication between customer and developers is a central aspect when applying agile development methods. Additionally, the agile development process is more well suited to smaller teams, in contrast to the plan-driven approaches, which is useful for large teams of developers working from different companies and countries (Ibid.: 75).
+
+The agile development process contrasts the plan-driven development processes in the way it considers design and implementation as its core activities. Other activities however, are an integrated part of the core activities. Likewise, the requirements of the software product are incorporated and considered in the design and implementation activities, rather than being a separate component (Ibid.: 74).
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/ModelsFig2.PNG}
+  \caption{\colorbox{red}{NEEDS CAPTION}}
+  \label{ModelsFig2}
+\end{figure}
+
+Figure \ref{ModelsFig2} illustrates the agile development process, and the way in which it alternates between the requirements and the core activities of design and implementation. Another feature that distinguishes the agile development process is the more informal way of testing the product. In most cases, the testing will be incorporated in the design and implementation activities (Ibid.: 75 + 84).
+
+
+\subsection{The Pros and Cons of Each Model}
+As we have now a few software process model, we will try to identify which model will suit our project the best. In order to get a better overview we have lined up the main pros and cons of each model in table \ref{table_models} below.
+
+\begin{longtable}{@{}lll@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{Model}} &
+\multicolumn{1}{c}{\textbf{Pros}} &
+\multicolumn{1}{c}{\textbf{Cons}} \\* \midrule
+\endhead
+
+Waterfall &
+\begin{tabular}[c]{@{}p{0.45\textwidth}@{}}
++ Intuitive \\[0.2cm]
++ Final outcome oriented \\[0.2cm]
++ Suitable for small projects \\[0.2cm]
++ Promotes documentation
+\end{tabular} & \begin{tabular}[c]{@{}p{0.4\textwidth}@{}}
+- Unaccommodating to requirement changes \\[0.2cm]
+- Excludes client from process \\[0.2cm]
+- Delays testing
+\end{tabular} \\[0.2cm] \midrule
+
+Spiral &
+\begin{tabular}[c]{@{}p{.45\textwidth}@{}}
++ Risk analysis and risk handling at every phase makes it good for projects with many unknown  risks that occur as the development proceeds \\[0.2cm]
++ Flexibility with requirement allows elements of the product to be added in when they become available or known \\[0.2cm]
++ Allows extensive use of prototypes
+\end{tabular} & \begin{tabular}[c]{@{}p{0.4\textwidth}@{}}
+- Good for large projects; expensive \\[0.2cm]
+- Difficulty with time management as the number of stages is unknown \\[0.2cm]
+- Requires excessive documentation
+\end{tabular} \\[0.2cm] \midrule
+
+STEPS &
+\begin{tabular}[c]{@{}p{0.45\textwidth}@{}}
++ No final product \\[0.2cm]
++ Emphasis on end-users \\[0.2cm]
++ Specialised model for work processes
+\end{tabular} & \begin{tabular}[c]{@{}p{0.4\textwidth}@{}}
+- No final product \\[0.2cm]
+- Heavily relies on user involvement in development \\[0.2cm]
+- Limited usability due to specialisation
+\end{tabular} \\[0.2cm] \midrule
+
+Agile &
+\begin{tabular}[c]{@{}p{0.45\textwidth}@{}}
++ Quick software development $ \Rightarrow $ delivers the software product to the customer faster \\[0.2cm]
++ Communication between customer and developer in focus \\[0.2cm]
++ As customers are involved it also ensure the best result \\[0.2cm]
++ With this model it is easier to adjust when requirements are changed\end{tabular} & \begin{tabular}[c]{@{}p{0.4\textwidth}@{}}
+- If  not well organized it can be hard to manage
+\end{tabular} \\[0.2cm] \bottomrule
+\caption{Pros and Cons of the Software Process Models}
+\label{table_models}
+\end{longtable}
+
+\pagebreak
+\subsection{Our decision}
+\subsubsection{What kind of model do we need?}
+The process used in different companies depends on the type of software being developed, the requirements of the software customer, and the skills of the people writing the software. As there is no universal process that is right for all kinds of software, most companies have developed their own development processes.
+For our case, we need a software process model that fits our team in relation to our size, the kind of product we are developing, and the time span we are working with. In this project, we are currently a rather small team of 7 developers working together on developing our mobile application, \textit{strEAT}. In addition, we need to get our software product on the market rather soon, since our deadline is December 3, 2018. Likewise, our app needs to be in use by customers during spring 2019 at the latest, since the street food “season” in Copenhagen is in the summer. Furthermore, it will be necessary to develop our app together with the users/customers. We need to investigate along the way what the needs of the customers are, and how, as an example, street food vendors in Copenhagen would like to use this app. Therefore, we need a software project model which focuses on customer involvement.
+
+\subsubsection{Which model have we chosen and why?}
+The Waterfall model contains a major drawback in terms of our project: minimal client-developer interaction. From the beginning, we knew the role of supervisor (Silviu, acting as a client) would be significant and we would like to keep close ties with him, with constant updates and feedback from both sides. Moreover, one phase of the Waterfall process cannot start until the previous is finished. We are, therefore, reluctant to use such a linear process as we want to be able to send feedback from one phase to another.
+
+The Spiral model, which contains the stepwise approach of a waterfall, is very focused on risk handling. While it might be considered an advantage for our app development, it is unfortunately too complex and expensive for our needs. The STEPS model facilitates cooperation between developers and users, it is primarily focused on software intended for use in existing work processes, which does not match the conditions of our case. Additionally, it is heavily reliant on the involvement of the users, of which we currently have none.
+
+The idea behind the agile method is to develop and produce software more quickly before the product lose its relevance. The agile process is incremental and continuous as the software is being developed, therefore it is easier to change the plan to reflect changing requirements. This feature is very relevant in our case - the nature of app development, with its variety and constant updates, makes it the most liveable, fast-paced market one can imagine. In fact, incremental development is now the most common approach for the development of application systems. Moreover, iterative development and agile methods are better for informal teams in which there is a constant close communication between its members and customers. Thus, we concluded the agile methodology is best suited for the purpose of our project.
+
+As previously mentioned in the section about the software qualities of our case, the agile software development model is well suited for the qualities we have identified. In relation to the usability and functional suitability of the app, we need strong communication with the street food vendors in Copenhagen, in order to develop an app that will actually fit their needs. Likewise, we need to know what those who are using our app to find street food need. For this, communication is the key. Since agile software development prioritises frequent communication with customers, this seems suitable for our needs. Considering both performance and reliability, we need a software process model that allows our team to frequently launch new updates and quickly fix small errors. We need to be able to do so in order to keep up with the market and demands, and in order for our app to always be the best version of itself. This illustrates that agile software development is a well suited approach for our case, since its process of smaller increments will make this possible. Lastly, in relation to portability, it can be considered that the app will only be able to compete within the growing market of food-related apps if it is adjustable and follows people’s preferences and needs in real-time, with ongoing observation of trends and target groups. In order to develop an adjustable app, we need a process model that allows adjustments when they appear.
+
+Agile software development is typically applied using one of several widely accepted frameworks. Such frameworks, sometimes referred to as methodologies, include Extreme Programming, Scrum, and DSDM \cite[p.73]{Sommerville}. In the next section, we will explain a bit about the Scrum framework, as we will use this in our work.

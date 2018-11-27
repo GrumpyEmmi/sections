@@ -1,0 +1,88 @@
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Quality Plan\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v2.05 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/QualityPlan.tex}{.../MainDocument/sections/QualityPlan.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/v5H5pSzf/34-quality-plan}{trello.com/c/v5H5pSzf/34-quality-plan} \\
+
+\textbf{Responsible:} idbo \& kati\\
+\textbf{Status:} Under review\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+15/11/18	&idbo \& kati	&Created \\
+15/11/18	&idbo			&Updated text \& formatting \\
+17/11/18	&abru			&Added tables \\
+			&				&Updated formatting \\
+18/11/18	&renha			&Added configuration management \\
+18/11/18	&leba			&Updated text \\
+20/11/18	&kati			&Updated formatting \& text \\
+25/11/18  &leba  &Removed introduction heading \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+
+\\
+\end{tabular}
+}
+
+\section{Quality Plan}
+The purpose of this quality plan is to ensure the quality of our app, and to assure that the qualities and standards prioritized in earlier stages of this project will be met.
+
+\begin{quotation}
+Quality assurance is the definition of processes and standards that should lead to high-quality products and the introduction of quality processes into the manufacturing process. \cite[p.]{Sommerville} \end{quotation}
+This quality plan will introduce the quality assurance strategy and describe the quality assurance techniques for our project.
+
+\subsection {Quality Assurance Strategy}
+As we are working with an agile approach, our quality assurance strategy reflects this. When working with an agile approach, the development practices and quality assurances practices are often intertwined. Therefore, the developers are also often responsible for the quality assurance. Additionally, quality assurance techniques will be applied along the way. \cite{Hou}
+Since we are using the Scrum framework, different quality assurance techniques will be applied along the way in each Scrum Sprint Cycle. As each Sprint is planned, quality assurance techniques that matche tasks from the Product Backlog will be selected. Here, techniques such as system metaphors and feedback from the Product Owner/on-site-customer, will likely be applied. As the code development is initialized so will quality assurance techniques such as Refactoring, Class-Responsibility-Collaboration Cards and Peer Programming. As the Sprint comes to an end, it is necessary to ensure that the unit testing has been passed.
+In the next section the various quality assurance techniques will be explained in greater detail.
+
+\subsection {Quality Assurance Techniques}
+
+\begin{longtable}[c]{@{}p{0.26\textwidth}p{.72\textwidth}@{}}
+\toprule
+\endfirsthead
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\toprule
+\endhead
+\textbf{Acceptance Testing}                       & In acceptance testing, the user gets to test the program. Only when the acceptance test is passed does the program live up to the agreed standards \cite[p.249]{Sommerville}.                                                                                                                                                                                                                                              \\* \midrule
+\textbf{Continuous Integration }                  & Continuous Integration refers to the concept of integrating the system and the production code continuously, and thereby be confronted with compatibility problems early on \cite[p.3]{Hou}                                                                                                                                                                                                                          \\* \midrule
+\textbf{Class-Responsibility-Collaboration Cards} & CRC is a game/activity for object-oriented languages. The game is a way for the team to discuss different class designs, responsibilities in the classes and the collaboration between the classes \cite[p. 463 ]{Barnes}.                                                                                                                                                                                            \\* \midrule
+\textbf{On-Site Customer }                        & On-Site Customer refers to feedback from the customers from an early stage in the development process to the project ends. Customer feedback is a characteristic for agile methods, and is therefore also an ongoing and important Quality Assurance technique \cite[p.3]{Hou}                                                                                                                                       \\* \midrule
+\textbf{Pair Programming}                         & Pair Programming refers to two programmers working on the same code. This way of working can improve the design and decrease defects in the software \cite[p.4]{Hou}                                                                                                                                                                                                                                                 \\* \midrule
+\textbf{Refactoring }                             & Refactoring is restructure of existing code. Refactoring is about changing the internal structure without changing the external behaviour of the programme \cite[p.4]{Hou}                                                                                                                                                                                                                                           \\* \midrule
+\textbf{System Metaphor }                         & System metaphor refers to a story that shortly describes how the system works. Often it includes the most important classes and patterns in the system. The story/metaphor is used as a tool to explain and discuss the software in a simpler way with the users. The system metaphor is also used to develop the systems architecture, again to increase communication between users and developers \cite[p.4]{Hou} \\ \midrule
+\textbf{Unit Testing }                            & When performing unit tests, each unit/component is tested to ensure that it works correctly and meets its specification \cite[p.232]{Sommerville}                                                                                                                                                                                                                                                                            \\* \bottomrule
+\caption{Overview of the Quality Assurance techniques}
+\label{qa_techniques}
+\end{longtable}
+
+\subsection {Quality Goals}
+To ensure the overall quality of our product, it is necessary to set out the quality goals. In our case, these goals are based on our product’s  \hyperref[Software Qualities]{software qualities}. In the early stages of the project, we decided on five product qualities that should be present in the app. They are presented in table \ref{product_qualities} below.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}p{0.26\textwidth}p{.72\textwidth}@{}}
+\toprule
+\textbf{Usability}              & \textit{by using System Metaphors and Acceptance Testing we will ensure the usability of the app}       \\ \midrule
+\textbf{Performance Efficiency} & \textit{by using Refactoring and Peer Programming we will ensure the performance efficiency of the app} \\ \midrule
+\textbf{Functional Suitability} & \textit{by using Continuous Integration we will ensure the functional suitability of the app}           \\ \midrule
+\textbf{Reliability}            & \textit{by using Refactoring we will ensure the reliability of the app}                                 \\ \midrule
+\textbf{Portability}            & \textit{by using CRC cards we will ensure the portability of the app}                                   \\ \bottomrule
+\end{tabular}
+\caption{Quality goals for our product}
+\label{product_qualities}
+\end{table}
+
+Sommerville argues that it is not possible to optimize all attributes in one system, because when some attributes is prioritized higher than others, there is naturally a sacrifice. It is important that the project team has decided on the most important attributes because then it will be easier to achieve the qualities when developing the software \cite[p. 704]{Sommerville}.Comparing software development to regular manufacturing, software development is more complex in terms of the link in between process quality and product quality. When machines are set up to create a certain product with specific qualities, the output of the machine is the same over and over again, and therefore the quality process is easy to standalize afterwards. That is not the case when it comes to software qualities because the design of the software is not only dependent on the developers' skills and experience, but also on external factors like early software release dates. \cite[p.705]{Sommerville}. \begin{quotation} (..) the development process used has a significant influence on the quality of the software, and good processes are more likely to lead to good quality software. Process quality management and improvement can result in fewer defects in the software being developed \cite[p.705]{Sommerville} \end{quotation}
+Therefore, this quality plan is an important step for the \textit{strEAT} project team in order to ensure high quality software with minimal defects.

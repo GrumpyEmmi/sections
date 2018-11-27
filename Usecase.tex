@@ -1,0 +1,158 @@
+
+%% UML means unified modelling language -
+
+%% look at http://plantuml.com/Use Case-diagram
+
+%%  CAREFUull with double \\  :)
+
+%% notes from meeting with Silviu.
+%% we should think about how the includes work.
+%% maybe its a bit reversed as it is now.
+%% check out  lecture 7
+%% Make a summary of the lements ywe use, like a legend. whats normal line ect.. This would make it nice
+
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Use Case Diagram and Scenarios\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v2.11 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/Usecase.tex}{.../MainDocument/sections/Usecase.tex} \\
+\textbf{Trello card link:} N/A \\
+
+\textbf{Responsible:} kati\\
+\textbf{Status:} Under review\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+??/??/??	&?		&Created \\
+27/10/18	&renha	&Updated formatting \\
+30/10/18	&kati	&Updated "Actors" \\
+31/10/18	&kati	&Updated formatting \& text \\
+01/11/18	&abru	&Added use case diagrams \\
+02/11/18	&leba 	&Updated formatting \& text \\
+02/11/18	&abru	&Updated diagrams, formatting \& text \\
+06/11/18	&kati	&Updated diagrams \\
+09/11/18	&leba	&Updated text \\
+18/11/18	&abru	&Added use case diagram legend \\
+			&		&Updated diagrams, formatting \& text \\ 
+18/11/18	&renha	&Added configuration management \\
+23/11/18	&leba	&Updated text \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+
+\\
+\end{tabular}
+}
+
+
+\section{Use Case Diagram and Scenarios}
+
+This section discusses various scenarios users of the app may find themselves in and presents the findings in the form of use case diagrams. In order to create use case diagrams, we brainstormed the tasks/activities the software is supposed to support.
+
+\begin{itemize}
+\item The app needs to be able to locate street food vendors close to the user.
+\item The app needs to make it possible for the user to find specific food.
+\item The app needs to support a review system.
+\item The app needs to provide information about the specific street food vendors: opening hours, menu, smiley report, etc.
+\item The app need to support the street food vendors by visualizing sales.
+\item The app needs to support a payment/ordering system.
+\item The app needs to support a way for users to follow their favourite street food vendors, so that the user will be notified on location changes, opening hours, etc.
+\end{itemize}
+
+
+\subsection{Scenarios}
+From these bullet points we decided on three specific scenarios that we thought would be interesting to work with in our Mock-Up.\\
+
+\textbf{Scenario 1:}
+A user (customer) is hungry and wants to find some food nearby. The user has heard about an app called \textit{strEAT} that locates food trucks in Copenhagen. The user decides to use the \textit{strEAT} app to find the location of a street food vendor, instead of looking for a place to eat on foot. After the user downloads the app, the user creates a new profile using their email. They locate a specific vendor on the map and look up their information. On the map, they can see that the food truck is not that far away from their current location. In the information view, the user can see that the food truck is currently open, and that they have a Mexican menu that looks tasty. They check the reviews and choose to order a taco and a sparkling water. Afterwards, the user walks directly to the vendor, picks up their food, and pays for it.
+\\
+
+\textbf{Scenario 2:}
+The user (customer) has a favourite food truck that they want to locate. Unfortunately, the food truck has a new location every week. They sign in to their \textit{strEAT} app and use it to search for the food truck. As they know the name of the food truck, they search the food truck by its name. The user finds it and gets its current location on the map. Now the user knows the exact location of the food truck today. They walk to the food truck, to order their food of choice.
+\\
+
+\textbf{Scenario 3:}
+A user (street food vendor) would like to find out where to locate his truck today. Luckily they recently signed up and registered their food truck in the app called \textit{strEAT}. Therefore, they sign in as a street food vendor. On the \textit{strEAT} vendor page, the user can access their sales figures, which recommends the top 5 best locations for their food truck, based on previous collected data. Now they know where to go today in order to maximize profits.
+\\
+\subsection{Actors}
+Afterwards, we identified the most relevant actors involved in our scenarios. In order to create use case diagrams, it is necessary to identify the specific actors involved \cite{Sommerville}. The actors are the so-called users of the app. In our case, we have identified two kinds of human actors. These were the customers and vendors, who would both be users of the \textit{strEAT} app. However, actors could also be other systems that our app will interact with. The two types of actors involved in our scenarios are described below.
+\\
+
+\textbf{Actor: Customer}
+\begin{description}
+\item Purpose: A person looking for street food.
+\item Characteristic: Someone hungry.
+\item Examples:\\
+\textbf{Actor A} is out in town and wants to find an area with a nice selection of street food. They want to decide on what kind of food they would like when they locate the food truck. They would therefore use the map to locate an area with several food trucks. \\
+\textbf{Actor B} is craving something specific, and would therefore only use the app to find this. Therefore, they would use the search function to locate a specific food truck.
+\end{description}
+\textbf{Actor: Vendor}
+\begin{description}
+\item Purpose: A vendor looking to sell their food.
+\item Characteristic: A person that owns a food truck and wants to broaden their customer base.
+\item Examples:\\
+\textbf{Actor A} is moving around a lot, and wants to keep customers updated on their current location. Actor A will therefore use the app to provide customers with their current location. \\
+\textbf{Actor B} has flexible opening hours. They, therefore, use the app to advertise for the food truck’s opening hours. Thereby, customers that follow the food truck on \textit{strEAT} will get a notification when they update the opening hours.
+\end{description}
+
+\subsection{Use Case Diagrams}
+Finally, we developed three use-case diagrams based on the actors in the scenarios. These diagrams are presented on the following pages in figures \ref{UseCase1}, \ref{UseCase2}, and \ref{UseCase3}, along with some elaborations on their content. At the end of the section, in table \ref{legend}, the legend for the diagrams can be found.\\ \\
+\pagebreak
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=.47]{figs/UseCase1}
+\caption{Use Case Diagram for Scenario 1}
+\label{UseCase1}
+\end{figure}
+
+In figure \ref{UseCase1}, the first scenario is illustrated. Here the customer is the primary actor, and the vendor is the secondary actor. The user can sign in, which includes (necessitates) that they have signed up. They now have the possibility to locate a vendor on the map to find a street food vendor nearby. From here the customer gets the possibility of viewing specific vendor information, which has been submitted by the vendor. When a customer accesses the vendor information, they can now choose to view the menu, again submitted by the vendor. While looking at the menu, the customer can select food that they wish to order. When they place the order, the order will automatically be sent to and processed by the vendor.
+\pagebreak
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=.53]{figs/UseCase2}
+\caption{Use Case Diagram for Scenario 2}
+\label{UseCase2}
+\end{figure}
+
+In figure \ref{UseCase2}, the customer is still the primary actor. In this diagram it is shown how a customer is searching for a specific street food vendor, instead of looking up nearby street food vendors on the map. In this scenario, the customer already knows what vendor they are looking for. Likewise, it is illustrated how a vendor can change their vendor information. If the vendor changes location or opening hours, the vendor information will automatically be updated. When a customer searches for a vendor the customer will immediately be able to view these changes, either in the information view or on the vendor map (since the map using geolocation will track the street food truck).
+\pagebreak
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=.8]{figs/UseCase3}
+\caption{Use Case Diagram for Scenario 3}
+\label{UseCase3}
+\end{figure}
+
+In figure \ref{UseCase3}, the street food vendor is the primary actor. When a customer orders food, the sales data will be stored according to the time the order was placed and the location of the food truck. This data is stored in the app, such that the street food vendor can access it in their "sales figures". When accessing the sales figures, the vendor will get the current recommendations for where to locate his street food truck.
+
+\clearpage
+\begin{table}[!ht]
+\centering
+\begin{tabular}{@{}c@{\hspace{.5cm}}p{.83\textwidth}@{}}
+\toprule
+\raisebox{-.8\totalheight}{\includegraphics[scale=.5]{figs/scenario_legend.png}}	& \textbf{System boundary box:} The square box defines a scenario or system, and contains the use cases of the given scenario. A single use case diagram can contain multiple different systems, that may or may not interact with eachother. Each scenario can consist of any number of use cases. \cite{Use_Case_Diagram_Tutorial}
+\\ \midrule
+\raisebox{-.75\totalheight}{\includegraphics[scale=.7]{figs/case_legend.png}}		& \textbf{Use Case:} The elliptical containers represent individual use cases. They can be present both in- and outside of the system boundary boxes. Use cases are associated with the actors of the scenario, and sometimes each other. \cite{Use_Case_Diagram_Tutorial}
+\\ \midrule
+\raisebox{-.85\totalheight}{\includegraphics[scale=.6]{figs/actor_legend.png}}		& \textbf{Actor:} The stick figure represents an actor. Actors are the ones who interact with the scenario, and by extension the use cases. They must be people (or other systems) outside of the given system, who contribute to (or take something from) the system through their interactions with the use cases. \cite{Use_Case_Diagram_Tutorial}
+\\ \midrule
+\raisebox{-20\totalheight}{\includegraphics[scale=.8]{figs/association_legend.png}}	& \textbf{Association:} The straight line represents an association between an actor and a use case. They do not further specify the nature of this relationship, only that it exists. An actor can be associated with any number of use cases, and a single use case can relate to more than one actor. \cite{Use_Case_Diagram_Tutorial}
+\\ \midrule
+\raisebox{-4.5\totalheight}{\includegraphics[scale=.8]{figs/include_legend.png}} 	& \textbf{Include/exclude:} The dotted line with open arrowhead is another type of association. It is used to map the relationships between the individual use cases. There are two different kinds of such associations; \textit{extend} and \textit{include}, the type of a given association is specified along the dotted line. When a use case (A) \textbf{includes} another use case (B), it means that when doing A, you must also do B -- in other words A is dependant on B. If instead A \textbf{extends} B, then you have the option to do A when doing B, however it is not required -- A is an optional extension of B. \cite{Use_Case_Diagram_Tutorial}
+\\ \bottomrule
+\end{tabular}
+\caption{Use case diagram legend}
+\label{legend}
+\end{table}

@@ -1,0 +1,266 @@
+%% let's add the picture o us playing lanning poker
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Plan and Estimation\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v3.13 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/Plan.tex}{.../MainDocument/sections/Plan.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/xi9AzgGN/8-project-plan-and-estimation}{trello.com/c/xi9AzgGN/8-project-plan-and-estimation} \\
+
+\textbf{Responsible:} abru \& leba\\
+\textbf{Status:} Finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+??/??/??	&?		&Created \\
+12/09/18	&leba 	&Added "Product Backlog" \& "Sprint Backlog" \\
+13/09/18	&leba	&Added "Introduction", "Planning With Scrum" \& sprint schedule \\
+			&		&Updated formatting \& text \\
+13/09/18	&abru	&Added "Estimation" \\
+14/09/18	&abru	&Added "Over of estimates" table \\
+			&		&Updated text \\
+25/09/18	&leba	&Updated sprint schedule \\
+27/09/18	&leba	&Added project schedule (v1) \\
+28/09/18	&abru	&Added project schedule (v2) \\
+29/10/18	&leba	&Updated formatting \& text \\
+01/11/18	&abru	&Added Latex versions of tables \\
+02/11/18	&leba	&Updated formatting \\
+18/11/18	&leba	&Updated text \\
+18/11/18	&renha	&Added configuration management \\
+23/11/18	&leba	&Updated formatting \& text \\
+25/11/18  &leba &Formatting and consistency update \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+abru	&Legacy section, imported from Google Docs to GitHub\\
+\\
+\end{tabular}
+}
+
+
+
+\section{Project Plan and Estimation} \label{project plan and estimation}
+
+This section introduces the planning process associated with the Scrum framework and Agile developement as a whole. Techniques for estimation are also introduced as part of the planning process itself.\\
+
+The flexible nature of Agile development necessitates splitting project planning into two planning phases, each dealing with different time frames. These are release planning and iteration planning \cite[p.680]{Sommerville}. Release planning deals with a longer time frame, typically of several months. It deals with all the current requirements of the final product as stipulated by the client. A high-level plan for the project’s multiple sprints is populated by the project requirements according to when they are expected to be addressed. Iteration planning deals with the individual sprints and how they will produce a viable product increment. The sections below define a Scrum approach to the first stages of release planning (Product Backlog and estimation), and iteration planning (Sprint Backlog). These terms were introduced in the Scrum section.
+
+\subsection{Planning With Scrum}
+
+Project planning with the Scrum framework is conducted in distinct steps with the use of several Scrum Artifacts as outlined in “The Scrum Guide” \cite{Schwaber}.
+
+The first is to brainstorm a list of user stories \cite{Sommerville} that outline all the features a user may want in the final product. The list may also be populated instead (or in conjunction) with a formal requirements document, detailings of knowledge aquistion, or some other description of the deliverable. This list is dynamic and will more than likely take many shapes during the life of the project. As this section outlines a plan for producing course deliverables, user stories are not applicable and will not feature in the plan.
+
+In the case where user stories are used, the next logical step is to rank them in order of priority, with the most important features to a user’s experience being at the top of the list. This is the Product Backlog, which in our case will be populated with course deliverables in chronological order. The effort required to complete each of the items in the backlog is then estimated. This can be conducted in a variety of ways; we have chosen to use the Planning Poker technique.
+
+Once the estimations are complete, the Product Owner and Scrum Master select a number of the highest priority items that they believe are possible to be completed in the next Sprint. A Sprint is a fixed time frame, usually between 2 and 4 weeks, during which a product increment is developed. The Development Team, is involved in this step, too; the selection of Product Backlog items is an iterative process. Based on the proposed selection, the Development Team design the required increment and produce a list of necessary tasks to complete. The agreed upon Project Backlog selections make up the Sprint Backlog. Each task the Scrum Team deem necessary to complete the increment is placed to the left side of the Scrum board in the “to-do” column. Items are moved across the board during the sprint, passing through the “in progress”, “awaiting approval” and “done” columns as necessary. The names of the columns may vary, but the idea is essentially the same. The end goal being all tasks are in the “done” column at the end of the sprint. A Sprint Review is conducted at its conclusion to address outstanding backlog items, what went well/wrong, budgeting, future Sprint planning, etc. It includes all parties, including key stakeholders. It’s outcome is a revised Product Backlog. A Sprint Retroactive is also conducted. This requires the Scrum Team to reflect on it’s own performance and suggest improvements with regards to  “(...) people, relationships, process, and tools” \cite{Schwaber}.
+\subsection{Product Backlog}
+
+The Product Backlog is populated by the course deliverables, as outlined on learnIT. They are arranged in the order in which they are intended to be completed.
+
+\begin{enumerate}[label=\alph*)]
+  \item Create the team protocol.
+  \item  Undertake a project kick-off.
+  \item  Explore our case in the form of literature reviews .
+  \item  Explore software qualities of our case.
+  \item  Choose a software process model.
+  \item  Define roles and responsibilities.
+  \item  Develop a project plan and estimation.
+  \item  Complete a risk analysis.
+  \item  Explore the use context using various research activities and present the results as raw data and an analysis.
+  \item  Develop 2 or 3 rich pictures that depict the context in which the software will be used.
+  \item  Develop a class-event table and class diagram.
+  \item  Develop a use-case diagram and scenarios.
+  \item  Create an interface design mock-up.
+  \item  Choose document conventions and apply to existing documentation.
+  \item  Outline a configuration management plan.
+  \item  Create an initial requirements document.
+  \item  Create a quality assurance plan.
+  \item  Construct a dynamic test specification.
+  \item  Explore architectural solutions and document an analysis of the chosen pattern.
+  \item  Reflect on the project and document the outcomes.
+\end{enumerate}
+
+
+\subsection{Estimation}
+
+
+A critical part of project planning is estimating the time required to finish the project, as well as the individual tasks. There exists multiple techniques for deriving these estimates, all with their own advantages and disadvantages.
+
+One such technique for agile teams, is playing a game of planning poker which “(...) combines expert opinion, analogy, and disaggregation into an enjoyable approach to estimating that results in quick but reliable estimates.” \cite[p. 56]{Cohn}. The game itself is simple; the developers involved in the project sit down at a table and are all given a set of playing cards. Each card representing a predetermined estimate in a given unit. The user stories are then “played” as individual hands, where a moderator, usually the project owner, reads aloud the user story. The developers are then able to ask questions about the user story to the moderator in order to resolve any ambiguity or confusion, and then have to play a card face down representing their estimates. Once all players have chosen their card, they are simultaneously revealed. If the players are in agreement you make note of the estimation, and move on to the next story. However, it is more than likely that not all participants have the same estimation, potentially not even close to it. In such cases the outliers are asked to explain their thought process and why they chose as they did, leading to a group discussion of the estimates, at the conclusion of which the participants once again play a card face down. This process can potentially be repeated as many times as needed, but it is important to note that the aim of the game is not necessarily to have all participants play the same card, but rather to reach an agreement, as put by Cohn: “(...) the point is not absolute precision but reasonableness” \cite[p. 57]{Cohn}.
+% TABLE STARTS HERE
+\begin{wraptable}{r}{3.3cm}
+\begin{tabular}{@{}cc@{}}
+\toprule
+\textbf{Story} & \textbf{Estimate} \\ \midrule
+a              & 1                 \\ \midrule
+b              & 1                 \\ \midrule
+c              & 1                 \\ \midrule
+d              & 2                 \\ \midrule
+e              & 2                 \\ \midrule
+f              & 2                 \\ \midrule
+g              & 2                 \\ \midrule
+h              & 1                 \\ \midrule
+i              & 2                 \\ \midrule
+j              & 3                 \\ \midrule
+k              & 4                 \\ \midrule
+l              & 3                 \\ \midrule
+m              & 3                 \\ \midrule
+n              & 2                 \\ \midrule
+o              & 3                 \\ \midrule
+p              & 5                 \\ \midrule
+q              & 3                 \\ \midrule
+r              & 3                 \\ \midrule
+s              & 5                 \\ \midrule
+t              & 5                 \\ \bottomrule
+\end{tabular}
+\caption{Overview of our estimates in story points for the Product Backlog, as a result of our planning poker game}
+\label{table_estimates}
+%TABLE ENDS HERE
+\end{wraptable}In other words, in order to conclude a “hand” of planning poker, the participants should have proximate estimates and be able to agree on a single estimate which will be used. The technique can be applied both in the release planning phase, in order to derive an estimate for the project as a whole, as well as in the iteration planning phase, to distribute work tasks optimally, or close to it, between the developers for an upcoming or ongoing sprint.
+
+As mentioned previously, the cards represent estimates in a given unit. This unit could be either a unit of time, such as ideal days, or a unit of size, e.g. story points. Ideal days are basically a derivation of work days, where you assume that “the story being estimated is the only thing you’ll work on, everything you need will be on hand when you start, [and] there will be no interruptions” (Ibid: 45). In other words, a perfect, or rather ideal, days worth of work on the given task, meaning that an ideal day might in reality correspond to one and a half or two work days or even more if you were to fall ill. As such, the advantage of using ideal days over elapsed days, is that ideal days are not susceptible to external factors, thus an estimate in ideal days is much more likely to be accurate.
+
+Story points are a relative unit of estimation, where the effort required to complete each user story is ranked in relation to each other. As such the individual values assigned to a given user story is irrelevant, and “what matters are the relative values assigned to different stories” (Ibid: 40). A story, a,  being estimated at 10 story points by itself says nothing about its size. However given two other stories b and c, estimated at 5 and 20 points respectively, we know that a is double the size of b and half the size of c, and are thus able to allocate project resources accordingly. In order to utilize story points as a unit for estimation, the concept of velocity is required. The term covers the project teams rate of progress per iteration, in other words the sum of story points they are able to complete in a single increment. As we are only working on this project part time, we will be using story points as our unit of measure for estimation for this project. The estimates, in story points, for our Project Backlog, as a result of our planning poker game, is presented in table \ref{table_estimates} to the right.
+
+
+\pagebreak
+\subsection{Project Schedule}
+Based on the estimations for each of the items in the Product Backlog, a project schedule may be constructed. It is subject to change as the project progresses through each sprint cycle. The project began with the first sprint in week 35. It consisted of start-up activities. The second sprint began on the Monday of week 37, and lasted only one week because it contained the first milestone, the tollgate 1. The rest of the sprints are all two weeks each, concluding on the Friday of week 49, accounting for the autumn break in week 42. On the next page table \ref{table_schedule} is presented, depicting the project broken into seven sprints. Each sprint in the table consists of items from the Product Backlog and the corresponding estimates from table \ref{table_estimates}.
+\pagebreak
+\begin{longtable}[c]{@{}lcccc@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{Task}}                        & \textbf{Responsible} & \textbf{Estimate} & \textbf{Start} & \textbf{End} \\* \midrule
+\endfirsthead
+%
+\multicolumn{5}{c}%
+{\textit{Table \thetable\ continued from previous page}} \\
+\toprule
+\multicolumn{1}{c}{\textbf{Task}}                        & \textbf{Responsible} & \textbf{Estimate} & \textbf{Start} & \textbf{End} \\* \midrule
+\endhead
+%
+\multicolumn{5}{c}{\textit{\textbf{Sprint 1 --- 28/08-10/09}}}                                                                         \\
+Create sprint backlog                                    & PO                   & -                 & 28/08          & -            \\
+Team meeting                                             & SM                   & -                 & 28/08          & -            \\
+a) Create team protocol                                  & TEAM                 & 1                 & 29/08          & 29/08        \\
+b) Undertake project kick-off                            & TEAM                 & 1                 & 30/08          & 30/08        \\
+c) Explore our case                                      & TEAM                 & 1                 & 31/08          & 31/08        \\
+Supervisor meeting                                       & PO \& SM             & -                 & 04/09          & -            \\
+Team meeting                                             & SM                   & -                 & 04/09          & -            \\
+d) Explore software qualities of our case                & TEAM                 & 2                 & 05/09          & 06/09        \\
+e) Choose a software process model                       & TEAM                 & 2                 & 08/09          & 09/09        \\* \midrule
+\multicolumn{5}{c}{\textit{\textbf{Sprint 2 --- 10/09-17/09}}}                                                                         \\
+Create sprint backlog                                    & PO                   & -                 & 10/09          & -            \\
+Supervisor meeting                                       & PO \& SM             & -                 & 11/09          & -            \\
+Team meeting                                             & SM                   & -                 & 11/09          & -            \\
+f) Define roles and responsibilities                     & TEAM                 & 2                 & 11/09          & 12/09        \\
+g) Develop project plan and estimation                   & TEAM                 & 2                 & 13/09          & 14/09        \\
+h) Complete a risk analysis                              & TEAM                 & 1                 & 14/09          & 14/09        \\
+Submit 1st tollgate                                      & SM                   & -                 & 14/09          & -            \\* \midrule
+\multicolumn{5}{c}{\textit{\textbf{Sprint 3 --- 17/09-01/10}}}                                                                         \\
+Create sprint backlog                                    & PO                   & -                 & 17/09          & -            \\
+Participate in scrum game                                & -                    & -                 & 18/09          & -            \\
+Supervisor meeting                                       & PO \& SM             & -                 & 18/09          & -            \\
+Team meeting                                             & SM                   & -                 & 18/09          & -            \\
+Supervisor meeting                                       & PO \& SM             & -                 & 25/09          & -            \\
+Team meeting                                             & SM                   & -                 & 25/09          & -            \\
+i) Explore the use context                               & TEAM                 & 2                 & 26/09          & 27/09        \\
+j) Develop rich pictures                                 & TEAM                 & 3                 & 28/09          & 30/09        \\
+Resubmit 1st tollgate*                                   & SM                   & -                 & 28/09          & -            \\* \midrule
+\multicolumn{5}{c}{\textit{\textbf{Sprint 4 --- 01/10-15/10}}}                                                                         \\
+Create sprint backlog                                    & PO                   & -                 & 01/10          & -            \\
+Supervisor meeting                                       & PO \& SM             & -                 & 02/10          & -            \\
+Team meeting                                             & SM                   & -                 & 02/10          & -            \\
+k) Develop a class-event table and class diagram         & TEAM                 & 4                 & 03/10          & 06/10        \\
+Supervisor meeting                                       & PO \& SM             & -                 & 09/10          & -            \\
+Team meeting                                             & SM                   & -                 & 09/10          & -            \\
+l) Develop a use-case diagram and scenarios              & TEAM                 & 3                 & 10/10          & 12/10        \\
+m) Create an interface design mock-up                    & TEAM                 & 3                 & 13/10          & 15/10        \\* \midrule
+\multicolumn{5}{c}{\textit{\textbf{Sprint 5 --- 22/10-05/11}}}                                                                         \\
+Create sprint backlog                                    & PO                   & -                 & 22/10          & -            \\
+Supervisor meeting                                       & PO \& SM             & -                 & 23/10          & -            \\
+Team meeting                                             & SM                   & -                 & 23/10          & -            \\
+n) Choose document conventions                           & TEAM                 & 2                 & 24/10          & 25/10        \\
+o) Outline configuration management plan                 & TEAM                 & 3                 & 26/10          & 28/10        \\
+Supervisor meeting                                       & PO \& SM             & -                 & 30/10          & -            \\
+Team meeting                                             & SM                   & -                 & 30/10          & -            \\
+p) Create initial requirements document                  & TEAM                 & 5                 & 31/10          & 04/11        \\
+Submit 2nd tollgate                                      & SM                   & -                 & 02/11          & -            \\* \midrule
+\multicolumn{5}{c}{\textit{\textbf{Sprint 6 --- 05/11-19/11}}}                                                                         \\
+Create sprint backlog                                    & PO                   & -                 & 05/11          & -            \\
+Supervisor meeting                                       & PO \& SM             & -                 & 06/11          & -            \\
+Team meeting                                             & SM                   & -                 & 06/11          & -            \\
+q) Create quality assurance plan                         & TEAM                 & 3                 & 07/11          & 09/11        \\
+r) Construct dynamic test specification                  & TEAM                 & 3                 & 10/11          & 12/11        \\
+Supervisor meeting                                       & PO \& SM             & -                 & 13/11          & -            \\
+Team meeting                                             & SM                   & -                 & 13/11          & -            \\
+Peer reviews                                             & -                    & -                 & 13/11          & -            \\
+Resubmit 2nd tollgate*                                   & SM                   & -                 & 16/11          & -            \\* \midrule
+\multicolumn{5}{c}{\textit{\textbf{Sprint 7 --- 19/11-03/12}}}                                                                         \\
+Create sprint backlog                                    & PO                   & -                 & 19/11          & -            \\
+Supervisor meeting                                       & PO \& SM             & -                 & 20/11          & -            \\
+Team meeting                                             & SM                   & -                 & 20/11          & -            \\
+s) Explore architectural solutions and document analysis & TEAM                 & 5                 & 21/11          & 25/11        \\
+Supervisor meeting                                       & PO \& SM             & -                 & 27/11          & -            \\
+Team meeting                                             & SM                   & -                 & 27/11          & -            \\
+t) Reflect on the project and document outcomes          & TEAM                 & 5                 & 28/11          & 02/12        \\
+Final submission                                         & SM                   & -                 & 03/12          & -            \\* \bottomrule
+\caption{Our project schedule}
+\label{table_schedule}\\
+\end{longtable}
+
+
+\subsection{Sprint Backlog}
+
+Each Sprint Backlog is crafted by the Scrum Master and Product Owner, and refined with the input of the Development Team. A few Product Backlog tasks remaining at the beginning of each sprint are selected based on their level of priority. The number of tasks chosen depends on the amount of work the Scrum Team believes can be achieved in the upcoming sprint. The Sprint Backlog is converted into tasks by the Development Team, the completion of which are expected to result in a working product increment. The Sprint Backlog and tasks presented below are for the 3rd sprint.
+\ \\ \\
+\textbf{Sprint 3 Backlog:}
+\begin{itemize}
+\item Explore the Use Context
+\item Rich Pictures
+\end{itemize}
+\ \\
+\textbf{Sprint Goals:}
+\begin{itemize}
+\item A documented decision on which research activity to implement
+\item Documentations of the results of the research activities (raw material and analysis).
+\item 2 or 3 Rich Pictures together with their explanation.
+\end{itemize}
+\ \\
+\textbf{Sprint Tasks:}
+\begin{itemize}
+\item Brainstorm on what research is necessary for your case
+\item Implement the research
+\item Document the results in an adequate manner
+\item Refine your documentation
+\item Develop two or three Rich Pictures (in subgroups)
+\item Present the Rich Pictures for the whole group
+\item Use the notes to write short explanations for the Rich Pictures.
+\end{itemize}
+\ \\
+\textbf{Sprint Schedule:}
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}lllllllllllllll@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{\textit{strEAT} --- Sprint 3}} & \multicolumn{7}{c}{Week 39}                                                                                                                                                                & \multicolumn{7}{c}{Week 40}                                                                                                                  \\ \midrule
+\multicolumn{1}{r}{}                      & M                        & T                        & W                        & T                        & F                        & S                        & S                        & M                        & T                        & W                        & T                        & F                        & S & S \\ \midrule
+Task 1 -- Brainstorming                          & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} &                          &                          &                          &                          &                          &                          &                          &                          &                          &   &   \\ \midrule
+Task 2 -- Reasearch                              &                          &                          &                          & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} &                          &                          &                          &                          &                          &   &   \\ \midrule
+Task 3 -- Document Research                      &                          &                          &                          & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} &                          &                          &                          &                          &                          &   &   \\ \midrule
+Task 4 -- Refine Documentation                   &                          &                          &                          &                          &                          &                          &                          & \cellcolor[HTML]{C0C0C0} &                          &                          &                          &                          &   &   \\ \midrule
+Task 5 -- Rich Pictures                          &                          &                          &                          &                          &                          &                          &                          &                          & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} &                          &   &   \\ \midrule
+Task 6 -- Present Rich Pictures                  &                          &                          &                          &                          &                          &                          &                          &                          &                          &                          &                          & \cellcolor[HTML]{C0C0C0} &   &   \\ \midrule
+Task 7 -- Rich Picture Descriptions              &                          &                          &                          &                          &                          &                          &                          &                          & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} &                          &   &   \\ \bottomrule
+\end{tabular}
+\caption{Activity schedule for Sprint 2}
+\label{table_sprint}
+\end{table}

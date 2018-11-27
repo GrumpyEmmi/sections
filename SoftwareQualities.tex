@@ -1,0 +1,140 @@
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Software Qualities\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v3.03 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/SoftwareQualities.tex}{.../MainDocument/sections/SoftwareQualities.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/pdzN8WHs/11-explore-the-software-qualities-of-your-case}{trello.com/c/pdzN8WHs/11-explore-the-software-qualities-of-your-case} \\
+
+\textbf{Responsible:} mgab\\
+\textbf{Status:} Finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+13/09/18	&?		&Created \\
+02/11/18	&leba	&Updated text \\
+18/11/18	&renha	&Added configuration management \\
+23/11/18	&leba	&Updated text \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+abru	&Legacy section, imported from Google Docs to GitHub
+\\
+\end{tabular}
+}
+
+\section{Software Qualities} \label{Software Qualities}
+
+In this section we reflect on the software qualities pertinent to the \textit{strEAT} app. In order to do this, it is necessary to focus on those categories that will be crucial for all stakeholders. These categories are presented in the section below, ordered by perceived importance.
+
+\subsection{App-Specific Focus Points}
+
+As said in the case exploration section, the most important factors to be considered about the food truck market are:
+
+\begin{itemize}
+
+\item Food and food markets are part of an area’s unique culture and thus constantly changing. That requires technology that is equally flexible to change in customers’ preferences.
+
+\item Food markets have to follow common business rules, as attracting investors and building brands is becoming more and more of a possibility for them.
+
+% I don't understand this sentence.
+\item Recognition is a big issue as food vendors must see quick results in using our app as opposed to none or a potential competitor’s product
+
+\item The app needs to maintain high standards in graphics, design and interface. When customers’ preferences for food aesthetics change, so must the way the food is presented on the app
+
+\item The chaotic nature of the street food markets, with all the moving around and change of scenery/menu options, needs to be countered by a thorough and easy-to-understand structure in the application. GPS services can, for example, help simplify finding a customer’s favourite food truck, while the menus can be changed by the vendors in real-time and thus prevent consumers from disappointment or confusion upon arriving at the venue.
+
+\item The app is filling a current gap in the market and, therefore, has to try and maintain a near-monopoly status.
+Keeping track of the venues is a must so that the idea of a regular customer base does not stay exclusive to non-portable venues. Instead, a new opportunity arises in which venues can switch between popular spots, possibly even within one day as to cater to the needs of multiple target groups at once.
+%You lost me on that last sentence.
+\end{itemize}
+
+
+In the following section, the necessary software qualities will be prioritised and make indirect references back to those factors mentioned above.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/QualitiesFig1.PNG}
+  \caption{This diagram show different aspects important to the consideration of software qualities}
+  \label{QualitiesFig1}
+\end{figure}
+
+
+\subsubsection{Usability}
+
+
+As the app is a prototype of its category, being the first app with an implemented map and real-time location service for food market stalls and trucks, it has to be attractive to the main target group of those venues, which is mainly the “millennial” generation. “A way that customers track a particular food truck and keep up on the events is participating through Facebook, Twitter, Instagram and Foursquare. [...] The more social media sites a [food] truck has, the better.” (Campbell, 2016) That gives us good prospects for an app to be successful, and also shows that the customers of outdoor food venues are mainly users of free social apps. As that concerns young people up to the age of 35, we can expect them to not be ready to spend money on an app that has not existed beforehand and can not, therefore, be estimated to be of high relevance. Instead, there will be a simple monthly subscription for vendors as to secure their spot on our list of venues. Photos will be taken by us of each venue and their food so that the app gets more approachable and the consumer can decide not only by reading the menu but also by seeing what they are potentially purchasing. The goal is to have a simple app with all needed features in excellent quality that makes it one of the consumer’s most frequently used apps:
+
+\begin{itemize}
+\item Ad-free.
+\item Software respects the user and is transparent about permissions.
+\item App is lightweight, as fast as possible, and advertising-free.
+\item Option for catering, pre-orders, bonus-programs, easy signUp.
+\item Logo \& interface recognisable.
+\item Intuitive surface.
+\item Free for the end-user.
+\item Subscription for vendors (cancelable monthly, automatically renewed otherwise).
+\item Android \& iOS.
+\item Transparency.
+\item Star-rating system.
+\item Feedback system.
+\item Search/filter options (vegan, vegetarian, halal, kosher, allergies…).
+\end{itemize}
+
+
+\subsubsection{Performance efficiency}
+
+As the goal is to design a fast and efficient product that one can download without considering e.g. the memory capacities of their iPhone, storage options can be non-permanent, as an internet connection is required for the main part of the app, the map, to work properly anyway. Therefore, cloud storage can be used to both save storage space on the users phone and enable the vendors, and us as designers, to update the app quicker and add new elements without having to request users to download a new version of the app entirely. In consequence, it becomes more user-friendly.
+
+\begin{itemize}
+\item NFC/GPS
+\item Caching instead of permanent storage
+\end{itemize}
+
+
+
+\subsubsection{Functional suitability}
+
+As the app provides no further entertainment or services that can be used without a functioning GPS and internet connection, all elementary premises for the app to be up and running at all points are of utmost importance.
+
+\begin{itemize}
+\item Implementation with a map needs to be accurate
+\item Real-time communication
+\item Intuitive design for the customers and vendors
+\end{itemize}
+
+
+\subsubsection{Reliability}
+
+As formerly mentioned, the goal is that the app gets used frequently and spontaneously by the end-user. Especially in the beginning, it can be crucial if it breaks down just once, can’t be updated or similar. The market is big and users might move on to arising alternatives quickly. We therefore need to ensure that, instead, we are the alternative to former (lower quality) products.
+
+
+\begin{itemize}
+\item Giving the customer and vendors the opportunity to contact us (contact information).
+\item Making sure the app is not crashing
+\item Quick fix for errors
+\item Java code
+\item Regular updates
+\item Regular meetings with the developing team to evaluate user feedback and errors, etc.
+\end{itemize}
+
+
+\subsubsection{Portability}
+
+Given the originality of the product, a long-term objective should be to expand beyond Reffen food market in Copenhagen and perhaps even Denmark. For that to happen, it is important to have easily adaptable interfaces and feedback that can be transferred onto other demographics to fulfill the needs of consumers e.g. in the US or Germany.
+
+%What's being said here, I'm lost?
+Adaptable for venues everywhere, e.g. Kødbyen (even other cities in Denmark.).
+Evaluating when it is right to move on.
+
+
+%We're talking about why we chose agile again? That's like the 4th time in this report.
+Considering these characteristics, we have decided to use an agile software development approach. It is the most flexible, which is an advantage for an app that has very few predecessors and needs to be as adaptable in its geographical capabilities as it is when it comes to fixing bugs or promptly acting on user feedback. The user needs to be able to see that they are being taken seriously and are an important part of our product development, while, at the same time, not being under any obligation to pay or use the product in a specific frequency.

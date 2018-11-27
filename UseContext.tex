@@ -1,0 +1,179 @@
+% %% include a table of what is the social context and what is technical.
+
+% Add brainstorm the section.
+
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Explore the Use Context\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v3.06 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/UseContext.tex}{.../MainDocument/sections/UseContext.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/O4hq8etf/7-explore-the-use-context}{trello.com/c/O4hq8etf/7-explore-the-use-context} \\
+
+\textbf{Responsible:} idbo \& kati\\
+\textbf{Status:} Finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+??/??/??	&?		&Created \\
+01/11/18	&abru	&Updated formatting \\
+02/11/18	&leba	&Updated text \\
+02/11/18	&idbo	&Updated text \\
+14/11/18	&abru	&Updated table \\
+18/11/18	&renha	&Added configuration management \\
+23/11/18	&leba	&Updated text \\
+25/11/18  &leba &Consistency checks \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+
+\\
+\end{tabular}
+}
+\section{Explore the Use Context}
+
+In order to understand the context of use of the \textit{strEAT} app, we need to understand both the social and technical context of our app. This necessitates thorough market research. Research findings are distilled into the aforementioned social and technical contexts.
+
+\subsection{Research}
+
+After some brainstorming, we decided to focus on some main research topics, such as:
+How do we make this app reflect customers/users’ preferences?
+
+\begin{itemize}
+  %visible? what do you mean by that?
+\item Are the street food vendors visible in Copenhagen?
+\item Do people actually need an app to find the location of street food vendors?
+\item What do users expect from an app like \textit{strEAT}
+\item Additional features.
+\end{itemize}
+
+In order to research this, we found that interviews would probably be the best way to go. Therefore, we created an interview guide that reflected an investigation of the user preferences and, furthermore, involved getting in contact with people working in the industry/or closely related to the industry. To see the interviews visit Appendix \ref{Interviews}.
+In relation to the technical context, we found that one of the main features of our app should be the map, since our app idea revolves around locating the street food vendors for the users. In addition, we found that the interviews reflected an interest and need for a rating system. This also correlates with some of the main issues raised in the section about the software qualities. Therefore, we decided to investigate the technical aspect of Geolocation.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}l@{\hspace{2.5cm}}l@{}}
+\toprule
+\textbf{Social Context} 	& \textbf{Technical Context}   \\ \midrule
+Necessity of the app        & Geolocation                  \\
+Expectations for the app    & Data collection and analysis \\
+Usage                       & Data protection - GDPR       \\
+Potential users             & Rating system                \\
+Targeted group              & Google integration           \\
+Problematic issues/critique & Facebook integration         \\
+Cost/benefit                & Push notifications           \\
+Advertisement               & Cross-platform OS            \\
+Subscriptions               & Programming language         \\ \bottomrule
+\end{tabular}
+\caption{Overview of our brainstorm}
+\label{table_usecontext}
+\end{table}
+
+\subsection{The Social Context}
+
+This part will cover the use context, where we have investigated the potential users of the app. In order for the \textit{strEAT} team to get a sense of the possible users of the app, we have interviewed two potential users: two 25 year old female students, and one bar manager from Tipi Bar at Verdenshjørnet, Nørrebro, Copenhagen. In order to get the interview data, we have used the semi structured interview form. The two students are referred as Student1 and Student2, the interview person from Tipi bar is referred as Bar Manager.
+
+\subsubsection{Potential user interviews: Two students age 25}
+
+In order to understand if apps were used to order food, we asked the two students if they used apps to order food, and what kind of apps they used. Both students used JustEat and one had additionally used the apps Wolt and Too Good To Go. Student1 was asked what a food app should contain:
+
+\begin{quotation}
+  ”First of all, provide me with a menu card: what’s on the menu; what can I get; the pricings; the opportunity to remove things from a dish if you have allergies or if you don’t like spicy stuff; and payment methods.” (Student1, page 1).
+\end{quotation}
+
+%ibid?
+Futhermore, Student1 also thought that food apps should contain a search engine and a map (ibid.). Student2 was asked which features would be nice to have on the \textit{strEAT} app, which was not necessarily on JustEat.
+
+
+\begin{quotation}
+  “That it is available for every area. If there are different restaurants, the restaurants should specify which area or district in Copenhagen they can go to, before you go to pay. Because often it happens when you pay and you put in the address, and then they give you feedback that “Oh we don’t deliver to these places”. So, something about that. (..) (Student2, page 1)
+\end{quotation}
+
+Furthermore, Student2 found it important that she could see ratings from other users on the \textit{strEAT} app (Student2, page 1).
+
+From the student’s answers, we can conclude that the \textit{strEAT} app should contain: menu cards, pricings, the opportunity to remove food items from the dishes, area availability, ratings from other users, a search engine, a map, and payment methods. At the end of the interview with Student1, she wanted to make a point about street food and its charm:
+
+\begin{quotation}
+”I kind off think the charm with street food is that you go there and eat there, not that you order it and go home and eat, so I think actually, maybe, just create some sort of overview maybe a point system, and sometimes street food can be quite expensive... maybe some sort of clip card system, where you get the tenth dish for free, I think that would be cool.” (Student1, page 1)
+\end{quotation}
+
+
+The team should take into consideration that a part of eating street food is actually to eat the street food close to the street food truck. Therefore, the ordering feature in the \textit{strEAT} app might not be necessary. Rather, menu cards, ratings, pricings, and a map are more useful for the users of the app. If these findings are considered an accurate representation of potential users' attitudes, then this should be investigated more by the project team.
+
+\subsubsection{Bar Manager Interview}
+
+The two interviewers from the project team both live nearby Verdenshjørnet, where the Tipi Bar is located. A couple of years ago there was ten street food trucks or more at Verdenshjørnet, but now there is only one street food truck left. In order to understand what happened with the area and why the street food trucks moved, we interviewed the bar manager of Tipi Bar.
+
+\begin{quotation}
+  “When we started the bar, or the owner started the bar, it was supposed to be a bar in the middle of a lot of street food and it worked for a while, but because they [the food trucks] opened and closed whenever they wanted to... they didn’t have opening hours like stores have, it made it difficult when guests came here, because they maybe came here for a specific kind of food truck and that was maybe closed, and there was maybe two [food trucks] opened out of the ten [food trucks] we had here. So people came here and were more disappointed than happy. So then we slowly built out Tipi Bar and started getting more guests here and then the food trucks moved out and now we have the only food truck that is actually open, which is ‘Chop stick’ [laugh] (..) (Bar Manager, page 1).
+\end{quotation}
+
+
+The original plan for Verdenshjørnet did not work out, since the street food trucks did not have common opening hours, and the project for Verdenshjørnet were not able to create a collaboration between the bar and the street food trucks because of that issue. Furthermore, the bar manager pointed out that the area was pretty “dead” during the winter, and that was also an issue.
+
+From the interview of the bar manager, we can conclude that the \textit{strEAT} app should contain the street food trucks opening hours. The bar manager did not know where the street food trucks moved to, but it is the project teams plan to find street food vendors and interview them about whether they would have an interest in a street food app, what an app like \textit{strEAT} should contain, and if they are still open during the winter.
+
+\subsection{The Technical Context}
+In this section we will go some of the technical aspects that we have found interesting to investigate further. Here we include the main topics of geolocation, rating systems and push notifications.
+
+\subsubsection{Geolocation}
+
+Our interviews highly suggested that our assumptions regarding using a map to get an overview of the street food vendors in Copenhagen, is a good way to go. Therefore, we will explore further the technical context of using geolocation in our app.
+
+Today, geolocation is increasingly being used for mobile apps, to identify the current geographical location of the user/mobile device. Geolocation uses both Wi-Fi, geofencing, Cell ID, and GPS to gather data for detecting the location. Contrary to GPS (Global Positioning System), geolocation also uses cell site triangulation for identifying the current location of a mobile device. Cell site triangulation, is a way of detecting the location of a device by combining the measurements from three different cell towers (if possible). The cell tower antenna arrays sends signals to each other, in order to detect the most precise positioning of the mobile device. This also means that it will work better in urban areas were the cell towers are located closer to each other, than in rural areas. In picture X it is illustrated how three cell towers communicate in order to locate the mobile device (red circle). \cite{GeolocationInMobileApps}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/CellsiteTower.jpg}
+  \caption{Picture of cell site triangulation. The figure is taken from \cite{CellsiteTowerSource} }
+  \label{CellsiteTower}
+\end{figure}
+
+
+
+
+We will therefore consider using geolocation, since the main aim of \textit{strEAT} is to enable users to find street food vendors close to the current location at the exact moment when the user checks the app. As the bar manager from Tipi Bar mentions, she doesn’t know where the street food trucks went once they stopped showing up at Verdenshjørnet. Likewise, she explains that many customers were disappointed when they showed up and the street food trucks where gone or closed. Therefore, it seems relevant to be able to use geolocation to track the street food trucks, for the user to detect their location. Additionally, another feature could be that it should be visible on the map whether the truck is open or closed, for example, by changing the colour of its marker on the map. Lastly, geolocation seems to be ideal when used in urban areas, and, therefore, it is appropriate for our app, since we will track the food trucks located in Copenhagen.
+
+In relation to geolocation, one thing we need to be aware of is the EU’s General Data Protection Regulation (GDPR). This regulation is a set of data protection rules for European companies to abide by \cite{GDPR_Dataprotection}. Because geolocation collects location data, which is personal data, the GDPR  also applies here. One of the main requirements in our case is to inform the user of about how their data is collected, stored and what it is used for.
+
+\subsubsection{Rating Systems}
+Another feature that the two interviewees mentioned was a rating system for the street food vendors. Therefore, this part will not focus on a rating system for the app \textit{strEAT}, but ratings for the street food vendors inside the app. Furthermore, this part will not explain the back-end implementation of a rating system, but the potential impact from the customers ratings on the street food vendors. In Wharton University of Pennsylvanias online business journal “Wharton@Knowledge” Chen Jin, a post-doctoral researcher answers questions about his research from his paper on 'The Impact of the Rating System on Online Marketplaces' (2017). \cite{RatingsystemsImpact}
+
+There are two types of rating systems: unilateral rating systems, where the customers are the only ones who can submit their ratings, and bilateral rating systems, where both customer and service provider can rate each other. Furthermore, Jins research showed that the rating system had a different impact on the service providers, the customers and the platform.
+In relation to \textit{strEAT}, it would make more sense to implement a unilateral rating system, since there is no reason for the vendors to rate the customers.
+
+Jin argues that it is always in the platforms favour to have a rating system, because it pushes the service providers to give extra effort, so that they will get good ratings from the customers, and therefore more customers. If the platforms are charging the service providers with a fee, they can increase and decrease the pricing in proportion to how many customers are using the platform.
+
+In relation to the \textit{strEAT} app, the project team has been concerned about the effects of a rating system on the street food vendors, especially if they received a bad review. Jin also thought that the service providers circumstances would get worse after the implementation of the unilateral rating system, because they were more 'observable' and if the platform became popular, could be charged a bigger fee from the platform. In fact, that was not the case, because the service providers made a better effort, they got better customer reviews, and therefore received more customers. Jins article is not focusing on the effect for the service providers if they receive a bad review. The project team finds it important that the rating system in \textit{strEAT} is not only a star rating system, but the customer has to leave a comment if they want to rate the street food vendor, since a star rating without a comment does not say much about the place. Mean and cruel reviews should of course be deleted.
+
+In terms of the rating system and the benefits for the platform, there is no argument for not having it if it make sense to the service that it provides. The pricing strategy though has to be carefully planned together with marketing research \cite{RatingsystemsImpact}.
+
+
+\subsubsection{Push Notification}
+An additional feature of the app, that we have discussed is push notifications. In relation to this, we have considered to allow the customers to “follow” their favourite street food vendor in the \textit{strEAT} app. When a customer follows a street food vendor, they will be asked to approve push notifications from the app. When a street food vendor changes location or have any news about their menu, discounts or opening hours, the customer will receive a push notification.
+
+\begin{quotation}
+“In its essence, a push notification is a brief message or alert that is sent through an installed app to everyone who has installed the app and who has enabled the receipt of these messages. It does not matter whether you have an iPhone, an Android or any other brand of phone; [...] To provide more accessibility, the app does not have to be open at the time of the notification in order for the message to be visible. This allows you to reach a wide range of people by “pushing” your message to an entire group at the same time.” \cite{WhatArePushnotifications}.
+\end{quotation}
+
+Having push notifications are beneficial for both the app owners, street food vendors and customers. Push notifications can result in increased user engagement, as customers will keep using the app \cite{PushnotificationsMatters}. When customers receive push notifications about their favourite street food vendor, they are more likely to purchase food from that truck. Likewise, they will benefit from possible discount notifications. In addition, push notifications also “help businesses avoid the dreaded act of download-and-ignore” \cite{WhatArePushnotifications}. However, in relation to all of this, it is highly important to keep in mind not to push too many notifications to the customers. As this might result in deletion of the app.
+
+In order to deliver a push notification, three actors are involved: The operating system push notification service (OSPNS), App publisher and Client app. Each mobile operating service has its own OSPNS service, that allows a push notification to include the required text, app badges and sounds (REF twilio). The app publisher, which is responsible for enabling the OSPNS, and the Client app, which is the app from which the customers will receive the push notification. \cite{WhatArePushnotifications}
+
+As mentioned, each mobile operating service has its own OSPNS service. In relation to this, it is important to mention that we have planned to allow the \textit{strEAT} app to be cross-platform. “Cross-platform refers to the ability of software to operate on more than one platform with identical (or nearly identical) functionality.”\cite{CrossPlatform}. However, this can refer to numerous things depending on the specific context:
+
+\begin{itemize}
+\item The type of operating system
+\item The type of processor
+\item The type of hardware system \cite{CrossPlatform}
+\end{itemize}
+
+In relation to the \textit{strEAT} app it is important that the app can run on two operating systems: Android (Linux based operating system) and iOS (Apple based operating system).

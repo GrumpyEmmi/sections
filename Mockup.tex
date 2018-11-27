@@ -1,0 +1,254 @@
+%%  dont use real names!!
+
+%% add transcription from workshop max 1-2 pages
+
+%% fololowup on the design from the workshop - add in post workshop reflections.
+
+%% documentation and user stories is the same. - that is documentation
+
+
+%% focus on just finishing it
+% - We can press the "offer discount" button if it will take some time to prepare the food.
+
+
+% We MAYBE ADD THIS WHOLE REAL APP THING LATER
+
+
+
+%\subsection{Native mock-up}
+
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\figsize\textwidth]{figs/androidstudio}
+%  \caption{Screenshot from android studio which we use to make the native mock-up}
+%  \label{guideline for boundaries}
+%\end{figure}
+
+
+%Take pictures and upload them to your group shared space.
+
+%Revise scenarios and class diagrams integrating the changes implied by the mock-up workshop.
+
+
+%\subsubsection{Guidelines}
+
+%Improvements: Develop common guidelines for the interface: UI pattern, metaphors, and so on.
+
+%\begin{itemize}
+%    \item guidelines for theme and colors
+%    \item guidelines for logos. See Slack for examples.
+%    \item something from androisd studio about how to set delimiters and boundaries.
+%\end{itemize}
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Interface Design Using mock-ups\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v2.07 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/mock-up.tex}{.../MainDocument/sections/mock-up.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/bkytqqhH/5-mock-up}{trello.com/c/bkytqqhH/5-mock-up} \\
+
+\textbf{Responsible:} renha\\
+\textbf{Status:} Under review\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+??/??/??	&?		&Created \\
+25/10/18	&renha	&Added sub subsections \& figure "Guideline..." \\
+26/10/18	&renha	&Added pen and paper mock-up \\
+			&		&Updated formatting, \& text \\
+29/10/18	&leba	&Updated text \\
+31/10/18	&renha	&Added "Implementation" section \\
+			&		&Updated formatting \& text \\
+01/11/18	&renha	&Added pictures from the mock-up workshop \\
+02/11/18	&renha	&Added revised mock-up \\
+			&		&Updated formatting \& text \\
+18/11/18	&renha	&Added configuration management \\
+25/11/18  &leba  &Consistency checks \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+renha	&This section needs to cleaned up a bit
+\\
+\end{tabular}
+}
+
+
+\section{Interface Design Using Mock-Ups}
+In this section we will:
+
+\begin{itemize}
+\item Identify functionality and design our software 'through the interface' together with the user.
+\item Gain an understanding of the functionality of the system and the necessary information to support development of mock-ups.
+\item Arrange a mock-up workshop with the user evaluation and usability tests.
+\end{itemize}
+
+To produce some useful mock-ups for the mock-up workshop we decided to iterate the itterate the Mock Ups in three steps:
+
+\begin{enumerate}
+    \item \textbf{Pen and paper mock-up:} Quck sketchup on paper of the app functionality
+    \item \textbf{Digial mock-up:} Higher quality mock-ups using image editing software
+    \item \textbf{Native mock-up:} implementatino of the mock-ups on their intended target platforms.\footnote{In our case Android and iOS.}
+\end{enumerate}
+
+
+\subsection{Senarios}
+We choose to develop the mock-ups, and showcase our app, from the User and Vendor side respectively. We agrees to produce six images showing the following functionality: \\
+\textbf{User Side:}
+\begin{enumerate}
+    \item \textbf{Login screen:} How the login screen will look for the User
+    \item \textbf{Main menu:} How the main menu will look for the User.
+    \item \textbf{Filtering:} How the user can apply filtering on different parameters in searches
+    \item \textbf{Maps:} How the map and location feature will look for the User
+    \item \textbf{Menus:} How the User will interact the Vendor menus:
+    \item \textbf{Skip the line:} How the "Skip the line" feature will look for the User
+\end{enumerate}
+\textbf{Vendor Side:}
+\begin{enumerate}
+    \item \textbf{Login screen:} How the login screen will look for the Vendor
+    \item \textbf{Main menu:} How the main menu will look for the User.
+    \item \textbf{Maps:} How the Vendor can use the maps integration.
+    \item \textbf{Edit menu:} Hot the Vendor can edit his information.
+    \item \textbf{Orders:} How the orders from the "Skip the line" feature will look for the Vendor.
+    \item \textbf{Businesstat:} Overview of how the Vendor can use \textit{strEAT} to improve her business.
+\end{enumerate}
+
+\subsection{Pen and Paper Mock-Ups}
+
+
+\begin{figure}
+   \centering
+   \begin{subfigure}[b]{0.475\textwidth}
+       \centering
+       \includegraphics[width=\textwidth]{figs/penuser}
+       \caption{The pen and paper mock-ups for the Vendor side}
+       \label{penvendor}
+   \end{subfigure}
+   \hfill
+   \begin{subfigure}[b]{0.475\textwidth}
+       \centering
+       \includegraphics[width=\textwidth]{figs/penvendor}
+       \caption{The pen and paper mock-ups for the User side}
+       \label{penuser}
+   \end{subfigure}
+\end{figure}
+
+\subsection{The Mock-Up Workshop}
+In order to recieve feedback on our initial Pen and paper mock-ups, we arranged a mock-up workshop.
+In this section we will discuss the preperation and implementation of the workshop. We interviewed two students for the mock-up workshop. We let them try out our mock-ups and got the Following feedback:\\
+\textbf{Mikkel SDT:}\\
+Mikkel had the following comments about out mock-up:
+
+\begin{itemize}
+    \item Lacking back buttons
+    \item Turn into swipe
+    \item I would like to be tempted by places. So just the finding is the nice function AND spotting the menu, NOT necessarily order it.
+    \item Vendor point of view seems nice
+    \item Skipping the line also might try
+\end{itemize}
+\textbf{Jonathan:}\\
+Jonathan also had some comments along with further recomendations:
+
+\begin{itemize}
+    \item Not enough filters (let’s add them)
+    \item “I want halal”
+    \item (“I don’t want kosher”  )
+    \item More cryptocurrency options (bitConnect)
+    \item Think already exist
+    \item You want special offers, discount when using an app.
+    \item With the skip line you cannot have recommendations but it is nice that.
+    \item I know what to expect from menu descriptions and photos of food.
+\end{itemize}
+
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/mockup}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/mockup2}
+    \end{subfigure}
+    \label{mockup1}
+    \caption{Pictures from our mock-up workshop.}
+\end{figure}
+
+
+
+%\subsection{Post workshop reflections.}
+%From the workshop we got a ot of good ideas and important input for our revised mock-ups
+
+
+
+
+\subsubsection{Revised Mock-Up.}
+With the feedback from the mock-up we were able to make a revised set of Mock Ups foor the user and vendorside respectively.
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/UserMockupRevised}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/UserMockupRevised}
+    \end{subfigure}
+    \label{MockupRevised}
+    \caption{Our revised mock-up}
+\end{figure}
+
+\subsubsection{Logo and Colours - Look and Feel}
+We had a session where we tried out different ideas for logos. you can see the results of this brainstorm in fig.\ref{fig:logos_all}
+
+\begin{figure}
+       \centering
+       \begin{subfigure}[b]{0.475\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{figs/logos/logo.png}
+           \caption{Logo 1}
+           \label{fig:logo1}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}[b]{0.475\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{figs/logos/logoemmi}
+           \caption{Logo 2}
+           \label{fig:logo2}
+       \end{subfigure}
+       \vskip\baselineskip
+       \begin{subfigure}[b]{0.475\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{figs/logos/logo2.png}
+          \caption{Logo 3}
+           \label{fig:logo3}
+       \end{subfigure}
+       \quad
+       \begin{subfigure}[b]{0.475\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{figs/logos/logo4.png}
+           \caption{Logo 4}
+           \label{fig:logo4}
+       \end{subfigure}
+       \caption{Logo Proposals}
+       \label{fig:logos_all}
+   \end{figure}
+
+
+
+   %\subsection{Digital mock-up}
+
+   %\begin{itemize}
+%       \item COMMING LATER - MAYBE
+%   \end{itemize}

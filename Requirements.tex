@@ -1,0 +1,171 @@
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Documenting Project Requirements \\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v3.05 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/Requirements.tex}{.../MainDocument/sections/Requirements.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/Pli19fXu/25-document-project-requirements}{trello.com/c/Pli19fXu/25-document-project-requirements} \\
+
+\textbf{Responsible:} leba \\
+\textbf{Status:} Finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+01/11/18	&leba	&Created \\
+01/11/18	&leba	&Updated formatting \& text \\
+01/11/18	&abru	&Added text for "Estimate" \\
+09/11/18	&leba	&Updated formatting \& text \\
+13/11/18	&leba	&Added non-functional requirements \\
+18/11/18	&renha	&Added configuration management \\
+25/11/18  &leba  &Added pre-amble \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+
+\\
+\end{tabular}
+}
+
+\section{Documenting Project Requirements}
+This section is presented in such a way as to portray an abridged version of a typical requirements document found in the industry. As per the layout suggested in the course notes, the document shall consist of an introduction, general description, and requirements specification.
+
+\subsection{Introduction}
+\subsubsection{Purpose}
+% the purpose of this requirements document
+The following document is intended to formally state the requirements of the current system as stipulated by the current list of user requirements, presented in the form of user stories. Due to the iterative nature of the agile development methodology, the user stories that make up the Product Backlog, and subsequently define the system requirements, are not fixed and may change over the course of the project at the discretion of the Product Owner.
+\subsubsection{Scope}
+% the overall scope of the product
+The product required to be delivered is a cross-platform mobile application that focuses on connecting street food vendors with potential customers.
+\subsubsection{Overview}
+% quick overview of the remaining sections and subsections
+The remainder of this requirements document consists of a general description of the product (perspective, function, and users) and requirements specficication (user stories, Product Backlog, and Sprint Backlog).
+\subsection{General Description}
+\subsubsection{Product Perspective}
+% why
+Existing food-based mobile applications fail to address the needs of vendors who lack fixed locations. \textit{strEAT} aims to cater to those needs by providing vendors with a medium through which they can inform potential customers of their whereabouts within Copenhagen.
+\subsubsection{Product Function}
+% what
+Essentially, the app will provide customers with the means to locate street food vendors throughout Copenhagen, view menu's of these vendors, and place orders. Vendors will be given the opportunity to update their current location via the app, view orders, and view various sales statistics.
+\subsubsection{User Characteristics}
+% who's using it
+Users of the application are customers and vendors. The customer is one who is searching for food, specifically street food, perhaps of a specific vendor or simply browsing the available options. The customer is expected to be an active smartphone user of <50 years old. The vendor is an entity who is providing the food, ideally of the non-formal street variety, to customers.
+\subsection{Requirements Specification}
+% explain that the requirements that make up the user stories and eventual product backlog are always evolving
+Agile development necessitates requirements reevaluation after each product iteration, i.e. after each sprint cycle. As such, the functional user requirements presented below, in the form of user stories, are the result of the first brainstorm sessions and subject to change at the discretion of the Product Owner. Likewise, the initial non-functional requirements are also presented below and are subject to change.
+\subsubsection{Functional Requirements}
+\paragraph{User Stories}
+\subparagraph{Customer}
+\begin{enumerate}
+  \item As a customer, I want to be able to choose list or map view.
+  \item As a customer, I want to be able to sort the list by specific criteria (e.g. price range, distance from me, and rating).
+  \item As a customer, I want to be able to search for a vendor by name.
+  \item As a customer, I want to be able to see the menus of the vendors.
+  \item As a customer, I want to see current vendor locations on a map.
+  \item As a customer, I want to see my location on a map.
+  \item As a customer, I want to be able to click on a vendor on a map to get their information (e.g. opening hours, price range, cuisine, distance from me, rating, and estimated waiting time).
+  \item As a customer, I don’t want to exit the map to see vendor information.
+  \item As a customer, I want to filter the map or list by specific criteria (e.g. price range, distance from me, rating, cuisine, followed vendors, and estimated waiting time).
+  \item As a customer, I want to be able to “follow” vendors and receive notifications.
+  \item As a customer, I want to be able to specify a pickup time.
+  \item As a customer, I want to be able to suggest a vendor to a friend.
+  \item As a customer, I want to be able to pay through the app.
+\end{enumerate}
+
+\subparagraph{Vendor}
+\begin{enumerate}
+  \item As a vendor, I want to be able to change my location.
+  \item As a vendor, I want to be able to change my general information.
+  \item As a vendor, I want to be able to change my menu(s).
+  \item As a vendor, I want to see my sales figures over multiple time periods.
+  \item As a vendor, I want to see my customer demographics.
+  \item As a vendor, I want to see my sales figures per location.
+  \item As a vendor, I want to know how often we get clicked on in the app.
+\end{enumerate}
+
+\subsubsection{Non-Functional Requirements}
+\begin{enumerate}
+  \item Within 2 minutes of login, the vendor shall be able to update their location (via any of the possible methods).
+  \item The customer shall be able to find a suitable vendor's menu via the search function (with criteria filtering) within 1 minute of opening the application.
+  \item The customer shall be able to go from a vendor's menu to completed order payment (with order confirmation) within 1 minute.
+  \item The user shall be able to navigate to and change personal information within 1 minute of opening the application.
+\end{enumerate}
+
+\subsubsection{Product Backlog}
+% as before
+Based on the functional requirements, presented above as user stories, we arrive at the following Product Backlog ordered based on perceived importance:
+\begin{enumerate}
+  \item As a customer, I want to see vendor locations on a map.
+  \item As a customer, I want to see my location on a map.
+  \item As a vendor, I want to be able to change my location.
+  \item As a customer, I want to be able to click on a vendor on a map to get their information.
+  \item As a vendor, I want to be able to change my menu(s).
+  \item As a customer, I want to be able to choose list or map view.
+  \item As a customer, I want to be able to search for a vendor by name.
+  \item As a customer, I want to filter the map or list by specific criteria.
+  \item As a customer, I want to be able to sort the list by specific criteria.
+  \item As a customer, I want to be able to see the menus of the vendors.
+  \item As a customer, I want to be able to pay through the app.
+  \item As a customer, I want to be able to specify a pickup time.
+  \item As a vendor, I want to be able to change my general information on the app.
+  \item As a customer, I want to be able to “follow” vendors and receive notifications.
+  \item As a customer, I don’t want to exit the map to see vendor information.
+  \item As a customer, I want to be able to suggest a vendor to a friend.
+  \item As a vendor, I want to see my sales figures over multiple time periods.
+  \item As a vendor, I want to see my customer demographics.
+  \item As a vendor, I want to see my sales figures per location.
+  \item As a vendor, I want to know how often we get clicked on in the app.
+\end{enumerate}
+\subsubsection{Estimation}
+% as before
+All estimates for the project will be approximated through planning poker involving both the project team and the project owner, in order to ensure they are satisfactory and as accurate as possible. The agreed upon estimates for the different tasks in the backlog were presented in table \ref{table_estimates} in the \hyperref[project plan and estimation]{Project Plan and Estimation} section of this portfolio.
+\subsubsection{Sprint Backlog}
+% as before
+Each Sprint Backlog is crafted by the Scrum Master and Project Owner, and refined with the input of the Development Team. A few remaining Product Backlog items remaining at the beginning of each Sprint are selected based on their level of priority. The number of items chosen depends on the amount of work the Scrum Team believes can be achieved in the upcoming Sprint. The Sprint Backlog is converted into workable tasks by the development team, the completion of which are expected to result in a working product increment.
+\paragraph{Sprint User Stories}
+\begin{enumerate}
+  \item As a customer, I want to see vendor locations on a map.
+  \item As a customer, I want to see my location on a map.
+  \item As a vendor, I want to be able to change my location.
+  \item As a customer, I want to be able to click on a vendor on a map to get their information.
+\end{enumerate}
+
+\paragraph{Sprint Goal}\mbox{} \\
+The outcome of this sprint is to have a basic working app with: a front page prompting for customer or vendor login; a customer home page showing Google maps centred on the customer’s location and populated by vendor location pins; and a vendor home page with buttons for “Update location”, “Update profile” and “Update menu”. When prompted by the customer clicking on a vendor’s pin, the application will request vendor information from a database and present it as a text box next to the pin.
+
+\paragraph{System Requirements}\mbox{} \\
+Below are the system requirements derived from the scenarios described by the Sprint Backlog items.
+\subparagraph{"...I want to see vendor locations and my location on a map."}
+\begin{itemize}
+  \item Customer is presented with a login page and proceeds to login via the chosen method.
+  \item Customer is presented with the Google Maps API centered on their current location and populated with pins representing currently operating vendors.
+  \item The vendors shown are retrieved from the application's relational database based on the current time and the opening hours stated by the vendors themselves.
+  \item The customer's current location is updated in the Customer object.
+\end{itemize}
+\subparagraph{"...I want to be able to change my location."}
+\begin{itemize}
+  \item Vendor is presented with a login page and proceeds to login via the chosen method.
+  \item Vendor is presented with the vendor homepage which consists of options for changing location, profile and menus.
+  \item Vendor selects the location option and is presented with another page prompting the vendor to select either "Use my current location" or "Enter location manually".
+  \item The former allows the application to automatically detect the vendor's location.
+  \item Selection of the latter presents the vendor with a textbox with an autofill dropdown menu of registered addresess matching the current text.
+  \item The vendor must select and option from the autofill populated by registered addresses.
+  \item The new location is stored in the Vendor object.
+\end{itemize}
+\subparagraph{"...I want to be able to click on a vendor on a map to get their information."}
+\begin{itemize}
+  \item Presented with vendor pins on the Google Maps API, the customer selects a pin.
+  \item The application retrieves the selected vendor information (name, price range, cuisine, opening times, estimated waiting time) from the relational database.
+  \item The information is presented in a textbox beside the pin.
+\end{itemize}
+
+
+% possibly pseudo for each item in sprint Backlog
+% or at least a more detailed developer-form of the each sprint backlog user story

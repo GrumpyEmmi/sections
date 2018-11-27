@@ -1,0 +1,65 @@
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Dynamic Test Sp\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v2.02 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/DynamicTestSpecification.tex}{.../MainDocument/sections/DynamicTestSpecification.tex} \\
+\textbf{Trello card link:} N/A \\
+
+\textbf{Responsible:} jopo\\
+\textbf{Status:} Under review\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+
+\\
+\end{tabular}
+}
+
+\section{Dynamic Test Specification}
+%% Explain the ideology and general outline of the framework
+Software testing is the process of exercising a program with the specific intent of finding errors prior to the end-user in order to assure quality of the software and conformance to requirements (performance, reliability, security, usability, etc.). Testing also provides valuable insights into the state of the software framework. Finding errors is especially important to the project in the early stages of development cycle, when costs of repair is the lowest.  \cite{Testing}.
+\\
+\subsection{White-box and Black-box Testing}
+In software development, we distinct Static and Dynamic testing. The latter, which is the focus of this section, analyses how the code behaves after compilation and execution, checking parameters such ass memory, usage, CPU usage, response time and overall performance of the software analyzed. Here, only the latter is taken into consideration. \cite{Dynamic_Testing}.
+There are two types of dynamic testing: white-box testing and black box testing. White-box testing is a s method in which the internal structure of the program being tested is known to the tester. Since, we do not have any code we consider black-box testing as a better approach. The test will be conducted by providing inputs (information from users of the app - both customers and vendors) and verifying the outputs against the expected outcome.
+
+\subsection{Testing for the project}
+Testing requires systematically developed set of test cases and that the result of the test for a given input is computed before. Hence, the test process consists of following stages: test planning, testing, design of test cases, preparing test data, running program on test data, comparing results to test cases, reporting testing, and correcting errors. In this section, however, we deal with the design of test cases and comparing exemplary results of what running code could result in. Following test cases are analyzed:
+
+\begin{itemize}
+\item Vendor input price of the dish
+\item User searches for vendor
+\item Payment for the order
+\item Vendor inputs pick up time for a specific order
+\item Sign up
+\item Customizing the order
+\end{itemize}
+
+Each test case includes: a unique identification (T-number in the spreadsheet), execution preconditions (pre-cons), data and actions (inputs), expected results including post-conditions and traces.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/testCases1-3.png}
+  \caption{First, second and third test case}
+  \label{First, second and third test case}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/testCases4-6.png}
+  \caption{Fourth, fifth and sixth test case}
+  \label{Fourth, fifth and sixth test case}
+\end{figure}

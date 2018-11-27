@@ -1,0 +1,283 @@
+%% some about maps from supervision- should maybe be connected to vendor.
+
+%% Lets figure it out. also there is come code from intro programming that can make these diagrams easily also there is draw.io
+
+%%  look at https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-class-diagram/
+
+%% Notes form meeting with Silviu 13.nov.
+%%  Should refer tooo itself as an object
+%% should place prder be inside costumer
+%% maybe make another ittertion -rered the chapeter
+%% mandatory to include reference.
+%% maybe pay more attentien to references - see lecture 5
+
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Class Diagram\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v3.05 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/ClassDiagram.tex}{.../MainDocument/sections/ClassDiagram.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/taKWSdfK/6-class-diagram}{trello.com/c/taKWSdfK/6-class-diagram} \\
+
+\textbf{Responsible:} abru\\
+\textbf{Status:} Finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+??/??/??	&?		&Created \\
+27/10/18 	&abru	&Added class diagram (v1) \& description \\
+01/11/18	&abru	&Updated class diagram (v2), description, introduction \& formatting \\
+17/11/18	&abru	&Added class diagram legend	\\
+			&		&Updated class diagram (v3), description \& formatting\\
+18/11/18	&renha	&Added configuration management \\
+24/11/18	&abru	&Updated formatting \& introduction		\\
+25/11/18  &leba &Formatting \\
+
+
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+
+\\
+\end{tabular}
+}
+
+
+
+\section{Class Diagram}
+UML Class Diagrams, which show the different object classes and their interactions, are used to make an easy to read visualization of the organization of a system. The diagram includes all the classes in the system as well as their respective attributes, methods and associations to one another. The Class Diagram for the \textit{strEAT} app is presented below in figure \ref{ClassDiagram}, the legend for the diagram can be found in table \ref{class_legend} on the next page, and it is followed by descriptions of the classes, and their respective fields, methods, and associations.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{figs/ClassDiagram.png}
+  \caption{UML Class Diagram for the \textit{strEAT} app}
+  \label{ClassDiagram}
+\end{figure}
+\onecolumn
+\pagebreak
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}c@{\hspace{.5cm}}p{.83\textwidth}@{}}
+\toprule
+\raisebox{-1.35\totalheight}{\includegraphics[scale=0.5]{figs/class_legend.png}}			& \textbf{Class:} A rounded box represents a class object in the diagram. In the upper section of the box is the class name, below, in the middle section, are the attributes (fields) of the class, their types and an optional default value. In the bottom section, the operations (methods) of the class are presented, along with their parameters and an optional return type. The + sign is the access modifier, in this case \textit{public}. Other modifiers are \textit{private} (-), \textit{protected} (\#) and \textit{package private} ($\sim$). \cite{Class_Diagram_Tutorial}
+\\ \midrule
+\raisebox{-2.2\totalheight}{\includegraphics[scale=0.5]{figs/bidirectional_legend.png}}	& \textbf{Bidirectional association:} A straight line represents a bidirectional association between two classes in the diagram, and is the default relationship between two classes in a class diagram. \cite{Class_Diagram_Tutorial} It means that both classes are aware of and interacts with each other. \cite{Class_Diagram_Tutorial}
+\\ \midrule
+\raisebox{-3.5\totalheight}{\includegraphics[scale=0.5]{figs/unidirectional_legend.png}}   & \textbf{Unidirectional association:} A straight line with an open arrowhead represent a unidirectional association between two classes. It is similar to the bidirectional association, however in this case only one of the classes is aware of and interacts with the other. The arrow points from the knowing class to the known class. \cite{Class_Diagram_Tutorial}
+\\ \midrule
+\raisebox{-2.8\totalheight}{\includegraphics[scale=0.5]{figs/inheritance_legend.png}}		& \textbf{Inheritance:} A straight line with a closed arrowhead represents inheritance. The arrows point from the subclass to the superclass. The subclass extends the superclass, meaning that it takes on all of attributes and operations of the superclass in addition to its own. \cite{Class_Diagram_Tutorial}
+\\ \midrule
+\raisebox{-3.8\totalheight}{\includegraphics[scale=0.5]{figs/multiplicity_legend.png}} & \textbf{Multiplicity: } The numbers, and the occasional *, written at both ends of the associations are called multiplicities. They represent the amount of instances of each class involved in the given relation. For example, a class with an association that has a 0..* (zero to many) multiplicity value are associated with zero or more instances of the class it associates with. Similarly a 1 denotes that an instance of the class associates with exactly one instance of the other class. \cite{Class_Diagram_Tutorial}
+\\ \bottomrule
+\end{tabular}
+\caption{Class diagram legend}
+\label{class_legend}
+\end{table}
+
+\subsection{Classes, Attributes, Methods, and Interactions}
+Below are descriptions of the classes, attributes and methods presented in the class diagram, as well as the interactions between classes.
+
+\subsubsection{View}
+The front end view, that contains the \emph{Account}, \emph{Map} and \emph{List} objects. \\ \\
+\textbf{Attributes:}
+\begin{description}
+\item\textit{currentLocation} is the current location of the \emph{Account} in use stored as a string.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item\textit{openMap()} creates a new \emph{Map} object.
+\item\textit{openList()} creates a new \emph{List} object.
+\item\textit{inspectVendor()} selection of a \emph{Vendor} object from a view (map or list) shows the information related to the \emph{Vendor} object.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item View has a bidirectional association with the \emph{Account} class, each instance of View is associated with 0 or more instances of \emph{Account}.
+\item View has a bidirectional association with the \emph{Map} class, each instance of View is associated with 1 instance of \emph{Map}.
+\item View has a bidirectional association with the \emph{List} class, each instance of View is associated with 1 instance of \emph{List}.
+\end{description}
+\vspace{.2cm}
+\subsubsection{Map}
+The Google Maps API which is populated with pins representing the different \emph{Vendor} objects \\ \\
+\textbf{Attributes:}
+\begin{description}
+\item\textit{customerLocation} records location of the \emph{Account} using the app as a string and shows it as a pin on the \emph{Map}.
+\item\textit{vendorLocations} stores the current locations of all \emph{Vendor} objects as a list and shows them as pins on the \emph{Map}.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item\textit{update()} updates the \emph{map} object to match the current locations of \emph{Vendor} and \emph{Customer} objects.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item Map has a bidirectional association with the \emph{View} class, each instance of Map is associated with 1 instance of \emph{View}.
+\item Map has a unidirectional association with the \emph{Account} class, each instance of Map is associated with 0 or more instances of \emph{Account} or either of it's sub-classes \emph{Customer} and \emph{Vendor}.
+\end{description}
+\vspace{.2cm}
+\subsubsection{List}
+List view of the \emph{Vendor} objects that match the search criteria of the \emph{Customer}. \\ \\
+\textbf{Attributes:}
+\begin{description}
+\item\textit{vendorList} contains all the \emph{Vendor} objects that match the search criteria in a list.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item \textit{update()} updates the \emph{vendorList} if the search criteria has been changed by the \emph{Customer}.
+\item \textit{sortDistance()} sorts the \emph{vendorList} by distance from \emph{Custumer} to \emph{Vendor}.
+\item \textit{sortCuisine()} sorts the \emph{vendorList} by the cuisine fields of the \emph{Vendor} objects.
+\item \textit{sortPrice()} sorts the \emph{vendorList} by the price fields of the \emph{Vendor} objects.
+\item \textit{sortRating()} sorts the \emph{vendorList} by the rating fields of the \emph{Vendor} objects.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item List has a bidirectional association with the \emph{View} class, each instance of List is associated with 1 instance of \emph{View}.
+\item List has a unidirectional association with the \emph{Vendor} class, each instance of List is associated with 0 or more instances of \emph{Vendor}.
+\end{description}
+\vspace{.2cm}
+\subsubsection{Account}
+The \emph{Account} class represents a user of the application and stores their information. \\ \\
+\noindent
+\textbf{Attributes:}
+\begin{description}
+\item \textit{name} name of person or vendor depending on the type of Account stored as a string.
+\item \textit{address} delivery address in case of \emph{Customer} account or business address in case of \emph{Vendor} stored as a string.
+\item \textit{contactInfo} contact phone number, e-mail etc. stored as a string.
+\item \textit{location} current location of user to whom the account belongs stored as a string; default value is address in case geolocation is unavailable.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item \textit{login()} logs the user into the application.
+\item \textit{updateLocation()} allows for manual or automatic geolocation of the user and updates the \emph{location} field.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item Account has a biderictional association with the \emph{View} class; all instances of Account are associated with 1 instance of \emph{View}.
+\item Account is the parent class of the \emph{Customer} and \emph{Vendor} classes.
+\end{description}
+\vspace{.2cm}
+\subsubsection{Customer}
+Represents a customer; someone with the intention of finding a vendor. \\ \\
+\textbf{Attributes:}
+\begin{description}
+\item \textit{paymentInfo} stores payment information to allow for in-app purchases as a string.
+\item \textit{followedList} stores the references to the \emph{Vendor} accounts the \emph{Customer} has requested to follow as a List<Vendor>; default value is \textit{null} for a new \emph{Customer}.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item\textit{followVendor(Vendor)} adds a reference to the \emph{Vendor} account to the \emph{followedList}; takes a \emph{Vendor} as a parameter.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item Customer has a bidirectional association with the \emph{Order} class; each instance of Customer is associated with 0 or more instances of \emph{Order}.
+\item Customer is a sub-class of \emph{Account} and inherits all of it's attributes and methods.
+\end{description}
+\vspace{.2cm}
+\subsubsection{Vendor}
+Represents a vendor; a business looking to sell their goods. \\ \\
+\textbf{Attributes:}
+\begin{description}
+\item\textit{cuisine} represents the type of food the \emph{Vendor} sells as a string.
+\item\textit{rating} stores the current approval rating of the \emph{Vendor} as a int; default is null if no ratings have been received.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item\textit{getSales} returns the \emph{Sales} object of the \emph{Vendor}.
+\item\textit{updateOrderStatus} increments the status orderStatus field of the \emph{Order} instance by one.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item Vendor has a bidirectional association with the \emph{Order} class; each instance of Vendor is associated with 0 or more instances of \emph{Order}.
+\item Vendor has a bidirectional association with the \emph{Menu} class; each instance of Vendor is associated with 0 or more instances of \emph{Menu}.
+\item Vendor has a bidirectional association with the \emph{Sales} class; each instance of Vendor is associated with 1 instance of \emph{Sales}.
+\item Vendor is a sub-class of \emph{Account} and inherits all of it's attributes and methods.
+\end{description}
+\vspace{.2cm}
+\subsubsection{Order}
+Represents a selection of food items from a particular Vendor. \\ \\
+\textbf{Attributes:}
+\begin{description}
+\item\textit{buyer} stores the \emph{Customer} who is making the order.
+\item \textit{seller} stores the \emph{Vendor} who is preparing the order.
+\item\textit{total} stores the total price (in kr.) of the order as a double; default value is 0.0 for a new \emph{Order}.
+\item\textit{orderStatus} indicates the status of the order represented as an int; 0 = not accepted, 1 = accepted, 2 = in progress, 3 = finished; default value is 0 for a new \emph{Order}.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item\textit{pay()} accesses the \emph{paymentInfo} of a \emph{Customer} to complete payment for the \emph{Order}.
+\item\textit{addItem(Item)} adds an \emph{Item} object from a \emph{Menu} to the current \emph{Order}; takes an \emph{Item} as parameter.
+\item\textit{removeItem(Item)} removes an \emph{Item} object from the current \emph{Order}; takes an \emph{Item} as parameter.
+\item\textit{deleteOrder} removes all instances of \emph{Item} from the current \emph{Order}.
+\item\textit{getTotal()} returns the summed priced for all instances  of \emph{Item} in the current \emph{Order}.
+\item\textit{rateVendor(int)} takes an int as parameter and adds it to the rating of the \emph{Vendor} fulfilling the \emph{Order}.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item Order has a bidirectional association with the \emph{Customer} class; each instance of Order is associated with 1 instance of \emph{Customer}.
+\item Order has a bidirectional association with the \emph{Vendor} class; each instance of Order is associated with 1 instance of \emph{Vendor}.
+\item Order has a bidirectional association with the \emph{Item} class; each instance of Order is associated with 1 or more instances of \emph{Item}
+\end{description}
+\vspace{.2cm}
+\subsubsection{Menu}
+The \emph{Menu} of a \emph{Vendor} containing \emph{Item} that \emph{Customer} can add to \emph{Order}.\\ \\
+\textbf{Attributes:}
+\begin{description}
+\item\textit{name} stores the name of the \emph{Menu} as a string.
+\item\textit{itemList} stores all \emph{Item} objects associated with the \emph{Menu}.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item\textit{addItem(Item)} adds a new \emph{Item} object to the \textit{itemList}; takes an \emph{Item} as parameter.
+\item\textit{removeItem(Item)} removes an \emph{Item} object from the \textit{itemList}; takes an \emph{Item} as parameter.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item Menu has a bidirectional association with the \emph{Vendor} class; each instance of Menu is associated with 1 instance of \emph{Vendor}.
+\item Menu has a bidirectional association with the \emph{Item} class; each instance of Menu is associated with 1 or more instances of \emph{Item}.
+\end{description}
+\vspace{.2cm}
+\subsubsection{Item}
+Represents a single entity on a \emph{Menu}.\\ \\
+\textbf{Attributes:}
+\begin{description}
+\item\textit{name} stores the name of the \emph{Item} as a string.
+\item\textit{quantity} represents the remaining pieces of the given \emph{Item} available for sale; default is 0.
+\item\textit{price} is the price of the \emph{Item} stored as a double.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item\textit{changeQuanity} changes the quantity of the given \emph{Item} available for sale; takes a double as parameter.
+\item\textit{changePrice} changes the price of the given \emph{Item}; takes an int as parameter.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item Item has a bidirection association with the \emph{Order} class; each instance of Item is associated with 0 or more instances of \emph{Order}.
+\item Item has a bidirection association with the \emph{Menu} class; each instance of Item is associated with 1 instance of \emph{Menu}.
+\end{description}
+\vspace{.2cm}
+\subsubsection{Sales}
+Stores information regarding previous sales.\\ \\
+\textbf{Attributes:}
+\begin{description}
+\item\textit{totalSales} gross figure of total revenue stored as a int; default is 0.
+\item\textit{totalCustomers} total number of unique \emph{Customer} objects that have placed an \emph{Order} stored as an int; default is 0.
+\item\textit{mostPopularItem} stores the \emph{Item} featured in the most instances of \emph{Order}.
+\item\textit{mostPopularLoc} records the location of \emph{Vendor} featured in the most instances of \emph{Order}.
+\end{description}
+\textbf{Methods:}
+\begin{description}
+\item\textit{updateSales()} completion of an \emph{Order} triggers an update to the \emph{Sales} object.
+\item\textit{sortDate()} sorts the figures by date.
+\item\textit{sortLocation()} sorts the figures by location.
+\end{description}
+\textbf{Interactions:}
+\begin{description}
+\item Sales has a bidirectional association with the \emph{Vendor} class; each instance of Sales is associated with 1 instance of \emph{Vendor}.
+\end{description}

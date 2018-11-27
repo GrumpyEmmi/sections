@@ -1,0 +1,71 @@
+%% Add explicit legends  -maybe :) there is also some code from introductionary programming that can make these diagrams.
+
+%%  @ jowita
+
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Rich Pictures\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v3.07 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/RichPictures.tex}{.../MainDocument/sections/RichPictures.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/ldfwhhOo/4-rich-pictures}{trello.com/c/ldfwhhOo/4-rich-pictures} \\
+
+\textbf{Responsible:} jopo \& mgab \\
+\textbf{Status:} Finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+??/??/??	&?		&Created \\
+27/10/18	&jopo	&Added rich picture 2 \\
+01/11/18	&jopo	&Added new rich pictures \\
+02/11/18	&jopp	&Added descriptions \\
+02/11/18	&leba	&Updated formatting \& text \\
+02/11/18	&renha	&Updated formatting \\
+09/11/18	&leba	&Updated text \\
+18/11/18	&renha	&Added configuration management \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+
+\\
+\end{tabular}
+}
+
+\section{Rich Pictures}
+In the following rich pictures, we are displaying the most important stakeholders for the \textit{strEAT} app and their connections to each other. Potential issues that need to be taken care of in the future are displayed next to the arrows to transport the subjects from the pre-analytic stage of the rich picture format to the analysis stage that follows. The graphic is a tool developers may return to throughout the life of the project should they require a quick overview of the original ideas. It should be referred to throughout the entire process to guarantee an authentic and consistent outcome.
+
+
+\subsection{A World With strEAT}
+
+Figure \ref{Richpicture} depicts the process of looking for street food vendor with the \textit{strEAT} app. The design is centered around the user and an app. The hungry user, willing to eat street food (either at the vendor's location or ordered online for pick up), opens the app. If already registered, the app immediately provides him with a map of food trucks and the possibility to filter choices. For each food truck, they have information about the current location, a menu with pictures of food, and the possibility to pay online and hence skip the line when picking up the food. The relationship between vendor and customer is simple - the vendor provides the customer with food, and the customer pays the vendor. Arrows from the vendor to the app indicate that the vendor must update the menu, opening hours and take care of \textit{SkipTheLine}\texttrademark orders (stipulating the time needed to prepare the food for each order placed). The app, in return, brings the vendor more customers and useful statistics (e.g. which locations were the most profitable). They a pay monthly subscription fee to the developers and the developers provide app maintenance, taking into consideration customer feedback. Feedback may include discrepancies between the app and reality, e.g. outdated menus, incorrect opening hours, etc.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/RichPicture_app.jpg}
+  \caption{The world with the app}
+  \label{Richpicture}
+\end{figure}
+
+
+
+\pagebreak
+
+
+\subsection{A World Without strEAT}
+
+Figure \ref{Richpicture_noapp} is also centred around the user but here no app is taken into account while searching for food. We have a hungry person (purposefully not called a "user" anymore) willing to eat, not in an ordinary restaurant, but at a street food establishment. This may be because either they prefer the atmosphere that comes with street food, or that the prices are usually lower. The user has a couple of options. They might, of course, wander through the city streets and stumble upon a food truck by chance, but that may not be a very satisfying solution. They might ask friends or locals (if being from outside of town) for recommendations. The recommendation obtained might be useful, but the location of the food truck remains to be known, as the owners may be partial to relocation now and again. The hungry person might then use an ordinary Google search, but that usually points to restaurants; food truck vendors owning and maintaining a website for their business is not particularly common. However, it still might point to some social media accounts (e.g. Facebook and Instagram) that might disclose the vendor's current location.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/RichPicture_no_app.jpg}
+  \caption{The world without the app }
+  \label{Richpicture_noapp}
+\end{figure}

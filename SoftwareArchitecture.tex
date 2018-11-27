@@ -1,0 +1,64 @@
+\ConfigMan{
+
+\normalsize
+\textbf{Document title:} Software Architecture\\
+\textbf{Version:}\footnote{Version number v.X.YY where X=1 "not finished", X=2 "under review" X=3 "finished". YY is incremented each time a change is made, and a short comment about the change is added to the changelog}
+ v1.01 \\
+
+\textbf{Github link:} \href{https://github.itu.dk/renha/strEAT/blob/master/MainDocument/sections/SoftwareArchitecture.tex}{.../MainDocument/sections/SoftwareArchitecture.tex} \\
+\textbf{Trello card link:} \href{https://trello.com/c/59sNSnZY/35-explore-architectural-solutions}{trello.com/c/59sNSnZY/35-explore-architectural-solutions} \\
+
+\textbf{Responsible:} kati \\
+\textbf{Status:} Not finished\\
+
+\textbf{Changelog:}
+\ConRule
+%%  DD/MM/YY USER:
+\begin{tabular}{@{\noindent}lll}
+26/11/18 &leba &Created \\
+26/11/18 &kati &Modified \\
+\\
+\end{tabular}
+
+\textbf{Comments:}
+\ConRule
+%%  USERNAME :
+\begin{tabular}{@{\noindent}ll}
+
+\\
+\end{tabular}
+}
+
+\section{Software Architecture}
+In this section we describe two common mobile application architectural patterns, select the most appropriate, and explain how it can be applied to our software. We then evaluate the pattern against some of the software  qualities selected and outlined earlier in this report.
+
+\subsection{Architectural Patterns}
+Software architecture and architectural design revolves around the concept of the organizing and designing the structure of software systems. Usually, in the agile processes, this would take place in earlier stages of the overall process\cite{Sommerville}[p. 168]. An architectural pattern works as a recipe for a successful way to organize and design a system, and is usually quite similar to design patterns\cite{Sommerville}[p. 176].
+
+In the world of mobile applications, many of the patterns in use are some flavour of the Model-View-Controller/Presenter pattern, whereby the UI logic is separated from the rest of the application \cite{Vasiliy}. This pattern promotes decoupling between components and results in highly modular and testable code. So long as the interfaces between components are maintained, their internals (i.e. logic, data structures, etc.) may be changed without fear of breaking the stack entrirely \cite{Martin}.
+
+\subsubsection{Model}
+The Model stores the system state. For example, in the case of a service application, this may refer to the storage of user data; or, perhaps, in a gaming application, this instead comprises of the game's current map configuration and player state.
+
+\subsubsection{View}
+The View is the interface between the application user and the underlying business logic. It receives input from the user, passes this information to the Controller/Presenter, and is eventually told what to present to the user.
+
+\subsubsection{Controller/Presenter}
+The Controller/Presenter essentially acts as the logical functionality component. It takes in information from View, processes its request as per the business logic, and returns the information View should present to the user and how. Processing the request from View may involve modifying the system state maintained by Model and retrieving information that will eventually be passed to View.
+
+\subsubsection{MVC vs. MVP}
+Although the general principles remain the same, there are slight differences between the Model-View-Controller (MVC) and Model-View-Presenter (MVP) patterns. In the MVC pattern, View is aware of Model's existence and may be notified of a change to the Model directly. This necessitates more logic be placed in the View component to handle notifications from Model, which may result in a "bloated" View. The MVP pattern aims to address this by instead moving all logic to the Presenter. View now knows nothing of the Model and is solely responsible for rendering the user interface. This abstraction is in line with what many software engineers consider good development practice \cite{Sommerville}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\figsize\textwidth]{figs/MVC_MVP.png}
+  \caption{The MVC and MVP patterns \cite{Vasiliy}}
+  \label{MVC_MVP}
+\end{figure}
+
+\subsection{\textit{strEAT} and MVP}
+Taking into consideration the arguments presented in the previous section, we believe the MVP pattern is a suitable choice. The View component will be responsible for presenting the customer with the graphics of the application (whether that be a map view, list view, menu, etc.). The Presenter component will handle the business logic. This includes retrieving vendor menus, compiling Order objects and passing them to Vendor's, handling vendor and customer information change requests, etc. The Model component will essentially comprise of a database containing user information. Including, but not limited to, vendor and customer location, confirmed orders, menus, etc. The flow of information will be as such: a customer interacts with the interface constructed by the View, this request is passed to the Presented which analyses the request and decides on a course of action, the Model provides (and/or alters) the requested information to the Presenter, and the Presenter then passes on a command to View which renders a response.
+
+\subsection{Evaluation}
+In regards to software qualities such as Reliability, Usability and Functional Suitability, the MVP pattern seems to satisfies both. In relation to Usability and Functional Suitability, the MVP pattern allows to easily change the view/interface of the app, withouth beeing concerned about restructuring the Presenter componenet. This will ensure that we can easily work around modifications of buttons, maps and lists etc. Making changes to the way the data is presented in the view, thefore does not affect the other two componenets. In relation to Reliability, the MVP pattern will make it easy for us as a team to collaborate on modifying the various componenets, since each componenet has its own responsibility. Therefore, it will most likely also accesible to detect errors.
+Likewise it can be argued that the MVP pattern works especially well with the scrum life cycle, since the strong emphasize on decoupling between components, makes it easy to adjust both small and bigger changes along the way. But overall, MVP is a tried and tested mobile application pattern popular with both iOS and Android developers.
